@@ -23,7 +23,7 @@ public class HospCDMapper
         //get the state name from the abbreviated form
         String fullState = "not available";
         try{
-          fullState = (String)STATE_MAP.get(line[endLine-13].toUpperCase()).toLowerCase();
+          fullState = (String)GetState.get(line[endLine-13].toUpperCase()).toLowerCase();
         }
         catch (Exception e){
 
@@ -37,66 +37,191 @@ public class HospCDMapper
       }
     }  
   } 
-  //Dictionary of state_abbreviation, full state name
-  public static final Map<String, String> STATE_MAP;
-  static {
-    STATE_MAP = new HashMap<String, String>();
-    STATE_MAP.put("AL", "Alabama");
-    STATE_MAP.put("AK", "Alaska");
-    STATE_MAP.put("AZ", "Arizona");
-    STATE_MAP.put("AR", "Arkansas");
-    STATE_MAP.put("CA", "California");
-    STATE_MAP.put("CO", "Colorado");
-    STATE_MAP.put("CT", "Connecticut");
-    STATE_MAP.put("DE", "Delaware");
-    STATE_MAP.put("DC", "District Of Columbia");
-    STATE_MAP.put("FL", "Florida");
-    STATE_MAP.put("GA", "Georgia");
-    STATE_MAP.put("GU", "Guam");
-    STATE_MAP.put("HI", "Hawaii");
-    STATE_MAP.put("ID", "Idaho");
-    STATE_MAP.put("IL", "Illinois");
-    STATE_MAP.put("IN", "Indiana");
-    STATE_MAP.put("IA", "Iowa");
-    STATE_MAP.put("KS", "Kansas");
-    STATE_MAP.put("KY", "Kentucky");
-    STATE_MAP.put("LA", "Louisiana");
-    STATE_MAP.put("ME", "Maine");
-    STATE_MAP.put("MD", "Maryland");
-    STATE_MAP.put("MA", "Massachusetts");
-    STATE_MAP.put("MI", "Michigan");
-    STATE_MAP.put("MN", "Minnesota");
-    STATE_MAP.put("MS", "Mississippi");
-    STATE_MAP.put("MO", "Missouri");
-    STATE_MAP.put("MT", "Montana");
-    STATE_MAP.put("NE", "Nebraska");
-    STATE_MAP.put("NV", "Nevada");
-    STATE_MAP.put("MP", "Northern Mariana Islands");
-    STATE_MAP.put("NH", "New Hampshire");
-    STATE_MAP.put("NJ", "New Jersey");
-    STATE_MAP.put("NM", "New Mexico");
-    STATE_MAP.put("NY", "New York");
-    STATE_MAP.put("NC", "North Carolina");
-    STATE_MAP.put("ND", "North Dakota");
-    STATE_MAP.put("OH", "Ohio");
-    STATE_MAP.put("OK", "Oklahoma");
-    STATE_MAP.put("OR", "Oregon");
-    STATE_MAP.put("PA", "Pennsylvania");
-    STATE_MAP.put("PR", "Puerto Rico");
-    STATE_MAP.put("RI", "Rhode Island");
-    STATE_MAP.put("SC", "South Carolina");
-    STATE_MAP.put("SD", "South Dakota");
-    STATE_MAP.put("TN", "Tennessee");
-    STATE_MAP.put("TX", "Texas");
-    STATE_MAP.put("UT", "Utah");
-    STATE_MAP.put("VT", "Vermont");
-    STATE_MAP.put("VI", "Virgin Islands");
-    STATE_MAP.put("VA", "Virginia");
-    STATE_MAP.put("WA", "Washington");
-    STATE_MAP.put("WV", "West Virginia");
-    STATE_MAP.put("WI", "Wisconsin");
-    STATE_MAP.put("WY", "Wyoming");
-  }
+public string GetState(State state)
+    {
+        switch (state)
+        {
+            case State.AL:
+                return "ALABAMA";
+
+            case State.AK:
+                return "ALASKA";
+
+            case State.AS:
+                return "AMERICAN SAMOA";
+
+            case State.AZ:
+                return "ARIZONA";
+
+            case State.AR:
+                return "ARKANSAS";
+
+            case State.CA:
+                return "CALIFORNIA";
+
+            case State.CO:
+                return "COLORADO";
+
+            case State.CT:
+                return "CONNECTICUT";
+
+            case State.DE:
+                return "DELAWARE";
+
+            case State.DC:
+                return "DISTRICT OF COLUMBIA";
+
+            case State.FM:
+                return "FEDERATED STATES OF MICRONESIA";
+
+            case State.FL:
+                return "FLORIDA";
+
+            case State.GA:
+                return "GEORGIA";
+
+            case State.GU:
+                return "GUAM";
+
+            case State.HI:
+                return "HAWAII";
+
+            case State.ID:
+                return "IDAHO";
+
+            case State.IL:
+                return "ILLINOIS";
+
+            case State.IN:
+                return "INDIANA";
+
+            case State.IA:
+                return "IOWA";
+
+            case State.KS:
+                return "KANSAS";
+
+            case State.KY:
+                return "KENTUCKY";
+
+            case State.LA:
+                return "LOUISIANA";
+
+            case State.ME:
+                return "MAINE";
+
+            case State.MH:
+                return "MARSHALL ISLANDS";
+
+            case State.MD:
+                return "MARYLAND";
+
+            case State.MA:
+                return "MASSACHUSETTS";
+
+            case State.MI:
+                return "MICHIGAN";
+
+            case State.MN:
+                return "MINNESOTA";
+
+            case State.MS:
+                return "MISSISSIPPI";
+
+            case State.MO:
+                return "MISSOURI";
+
+            case State.MT:
+                return "MONTANA";
+
+            case State.NE:
+                return "NEBRASKA";
+
+            case State.NV:
+                return "NEVADA";
+
+            case State.NH:
+                return "NEW HAMPSHIRE";
+
+            case State.NJ:
+                return "NEW JERSEY";
+
+            case State.NM:
+                return "NEW MEXICO";
+
+            case State.NY:
+                return "NEW YORK";
+
+            case State.NC:
+                return "NORTH CAROLINA";
+
+            case State.ND:
+                return "NORTH DAKOTA";
+
+            case State.MP:
+                return "NORTHERN MARIANA ISLANDS";
+
+            case State.OH: 
+                return "OHIO";
+
+            case State.OK:
+                return "OKLAHOMA";
+
+            case State.OR:
+                return "OREGON";
+
+            case State.PW:
+                return "PALAU";
+
+            case State.PA:
+                return "PENNSYLVANIA";
+
+            case State.PR:
+                return "PUERTO RICO";
+
+            case State.RI:
+                return "RHODE ISLAND";
+
+            case State.SC:
+                return "SOUTH CAROLINA";
+
+            case State.SD:
+                return "SOUTH DAKOTA";
+
+            case State.TN:
+                return "TENNESSEE";
+
+            case State.TX:
+                return "TEXAS";
+
+            case State.UT:
+                return "UTAH";
+
+            case State.VT:
+                return "VERMONT";
+
+            case State.VI:
+                return "VIRGIN ISLANDS";
+
+            case State.VA:
+                return "VIRGINIA";
+
+            case State.WA:
+                return "WASHINGTON";
+
+            case State.WV:
+                return "WEST VIRGINIA";
+
+            case State.WI:
+                return "WISCONSIN";
+
+            case State.WY:
+                return "WYOMING";
+        }
+
+        throw new Exception("Not Available");
+    }
+}
 }
 
 
