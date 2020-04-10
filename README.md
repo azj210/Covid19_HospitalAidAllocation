@@ -9,6 +9,6 @@ https://data.medicare.gov/data/hospital-compare.
 
 Within the downloaded files use the “ComplicationsAndDeaths” file
 Census Data was taken in the “Annual County Resident Population Estimates by Age, Sex, Race, and Hispanic Origin: April 1, 2010 to July 1, 2018 (CC-EST2018-ALLDATA)” section under United States from: 
-https://www.census.gov/data/tables/time-series/demo/popest/2010s-countiesdetail.html#par_textimage_1383669527
+https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-detail.html#par_textimage_1383669527
 
 Hospital beds was taken from: https://www.ahd.com/state_statistics.html. 
