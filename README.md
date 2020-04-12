@@ -24,9 +24,28 @@ Hospital beds data was taken from: https://www.ahd.com/state_statistics.html.
 
 
 **Final Data Schema after Cleaning**
+
 Census
 - County: String
 - State: String
 - Population: int
 - MalePopulation: int
+
+Covid19
+- County: String
+- State: String
+- Cases: int
+- Deaths: int
+
+HospitalComplicationsAndDeaths
+- City: String
+- County: String
+- State: String
+- Quality: double
+
+HospitalBeds
+- City: String
+- State: String
+- Beds: int
+
 
