@@ -22,42 +22,11 @@ Data was taken under “Download CSV Flat Files” from: https://data.medicare.g
 Hospital beds data was taken from: https://www.ahd.com/state_statistics.html. 
 
 
+
 **Final Data Schema after Cleaning**
 Census
-County : String 
-- Name of county
-State : String
-- Name of the state the county is in
-Population : int
-- Number of individuals in that county whose age is >= 60
-Male : int
-- Number of male population in that county whose age is >= 60
-
-Covid19 
-County - String
-- Name of county
-State - String
-- Name of the state the county is in 
-Cases - int
-- Covid19 cases in that county 
-Deaths - int
-- Covid19 deaths in that county
-
-Hospital Complications and Deaths  
-City - String
-- Name of city
-County - String
-- Name of county that city is in
-State - String
-- Name of state that city is in
-Quality - double
-- Positive number means % of less deaths than national average while Negative number means % of more deaths than national average for respiratory illnesses
-
-Hospital Beds  
-City - String 
-- Name of city
-State - String
-- Name of state that city is in
-Beds - int
-- Number of hospital beds in that city
+- County: String
+- State: String
+- Population: int
+- MalePopulation: int
 
