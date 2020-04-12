@@ -16,3 +16,4 @@ with open('CovidData.csv', mode='w+') as f:
 
 
 
+

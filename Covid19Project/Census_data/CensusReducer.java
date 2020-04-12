@@ -22,7 +22,7 @@ public class CensusReducer
       totalMale += Integer.parseInt(calc[1]);
     }
     
-    String TotPop_and_Male = Integer.toString(totalPOP) + " ! " +  Integer.toString(totalMale);
+    String TotPop_and_Male = Integer.toString(totalPOP) + "!" +  Integer.toString(totalMale);
     //key is STNAME!CTYNAME and value is TOT_POP!TOT_MALE of a everyone in the 60+ age group range for a particular STNAME!CTYNAME
     context.write(key, new Text(TotPop_and_Male));
      
