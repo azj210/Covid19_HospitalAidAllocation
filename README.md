@@ -1,5 +1,5 @@
 # Covid19_HospitalAidAllocation
-**Goal of Project**
+**Goal of Project:**
 Examine hospital quality and bed data sets in comparison to Covid19 and US demographics data to reach conclusion on hospital aid allocation by county
 
 MapReduce code for each dataset is found in their respective folders. Note that CountRecs is not part of the analytics, rather it is MapReduce to check the number of lines in input and output files.
