@@ -25,10 +25,12 @@ public class HospCDReducer
 
     //larger negative deviation means more worse than national avg
     Double totalDeviation = (10.0684932586596 - ((totalDeaths / totalCases)));
+    String formatDeviation = String.format("%.4f", totalDeviation);
 
     if (totalCases != 0) {
       //key is city!county!state and value is deviation of %deaths related to respiratory illness compared to the national average
-      context.write(key, new Text(totalDeviation.toString()));
+      context.write(key, new Text(formatDeviation));
+      //context.write(key, new Text(totalDeviation.toString()));
     }
     else{
       //complications data was not available
