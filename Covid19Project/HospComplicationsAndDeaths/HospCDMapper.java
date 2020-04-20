@@ -28,7 +28,7 @@ public class HospCDMapper
 
         }
         //setting the key value pair
-        if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings")) && fullState.equals("new york")){
+        if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings") || line[endLine-11].equals("bronx")) && fullState.equals("new york")){
             String locationRecord = line[endLine-14] + "!" + "new york" + "!" + fullState;
             String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
             //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
