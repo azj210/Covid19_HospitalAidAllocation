@@ -28,11 +28,20 @@ public class HospCDMapper
 
         }
         //setting the key value pair
-        String locationRecord = line[endLine-14] + "!" + line[endLine-11] + "!" + fullState;
-        String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
-        //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
-        context.write(new Text(locationRecord), new Text(complicationRecord));
-        break;
+        if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings")) && fullState.equals("new york")){
+            String locationRecord = line[endLine-14] + "!" + "new york" + "!" + fullState;
+            String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
+            //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
+            context.write(new Text(locationRecord), new Text(complicationRecord));
+            break;
+        }
+        else{
+            String locationRecord = line[endLine-14] + "!" + line[endLine-11] + "!" + fullState;
+            String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
+            //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
+            context.write(new Text(locationRecord), new Text(complicationRecord));
+            break;
+        }
       }
     }  
   } 

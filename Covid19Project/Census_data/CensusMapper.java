@@ -14,7 +14,7 @@ public class CensusMapper
       throws IOException, InterruptedException {
     
     String[] line = value.toString().toLowerCase().split(",");
-    String[] AGEGRP = {"13", "14", "15", "16", "17", "18"};
+    String[] AGEGRP = {"12", "13", "14", "15", "16", "17", "18"};
 
     for (int i=0; i < AGEGRP.length; i++){
       if (line[5].equals("11") && line[6].equals(AGEGRP[i])){
