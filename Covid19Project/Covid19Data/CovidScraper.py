@@ -26,7 +26,31 @@ def predict(x, y, pred):
         else:
             futureCases.append(case)
     return futureCases
-    
+
+def generatePredict(tracker, condition, writer):
+    for i in tracker.keys():
+        if i == "new york city, new york":
+            place = ["new york", "new york"]
+        else:
+            place = i.split(",")
+        if len(tracker[i]) > 2:
+            data = tracker[i]
+            time = [t for t in range (1,len(tracker[i]))]
+            if condition == "cases":
+                #new cases 
+                cases = []
+                for j in range(1,len(data)):
+                    cases.append(int(data[j][0]) - int(data[j-1][0]))
+                #calculate number of new cases 4 days out
+                writer.writerow([place[0],place[1]] + predict(time, cases, 4))
+            else:
+                deaths = []
+                for j in range(1,len(data)):
+                    deaths.append(int(data[j][1]) - int(data[j-1][1]))         
+                writer.writerow([place[0],place[1]] + predict(time, deaths, 4))
+        #error handling for if there is 2 days or less worth of data
+        else:
+            writer.writerow([place[0],place[1]] + [0]*4)
 
 def main():
     start = date(2020,3,22)
@@ -46,23 +70,13 @@ def main():
         end += delta
         predDates.append(end.strftime('%m-%d-%Y'))
         allDates.append(end.strftime('%m-%d-%Y'))
-    for i in tracker.keys():
-        if len(tracker[i]) > 2:
-            data = tracker[i]
-            time = [t for t in range (1,len(tracker[i]))]
-            #new cases and new deaths
-            cases = []
-            deaths = []
-            for j in range(1,len(data)):
-                cases.append(int(data[j][0]) - int(data[j-1][0]))
-                deaths.append(int(data[j][1]) - int(data[j-1][1]))         
-            #first calculate number of new cases 4 days out
-            newCases = predict(time, cases, 4)
-            newDeaths = predict(time, deaths, 4)
-            print(i, newCases, newDeaths)
-        #error handling for if there is 1 week or less worth of data
-        else:
-            print(i, [0]*4, [0]*4)
+    with open('predictCases.csv', mode='w+') as f:
+        writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        generatePredict(tracker, "cases", writer)
+    with open('predictDeaths.csv', mode='w+') as f:
+        writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        generatePredict(tracker, "deaths", writer)
+            
 
 if __name__ == '__main__':
 	main()
