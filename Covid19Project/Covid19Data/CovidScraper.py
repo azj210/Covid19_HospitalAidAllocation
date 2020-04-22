@@ -57,24 +57,17 @@ def generatePredict(tracker, condition, writer):
                 writer.writerow([place[0],place[1]] + futureDeaths)
                 deaths += futureDeaths
                 iDeaths[i] = deaths
-        """
-        else:
-            if condition == "cases":
-                iCases[i] = [0] * 4
-            else:
-                iDeaths[i] = [0] * 4
-            writer.writerow([place[0],place[1]] + [0]*4)
-        """
     if condition == "cases":
         return iCases
     else:
         return iDeaths
 
 #c - time series of new cases from 3/22 to 3 days from the end date. d is corresponding new death time series
-def bedsNeeded(c,d):
+def bedsNeeded(c, d, days, writer):
     beds = defaultdict(list)
     #run simulation for each county
     for i in c.keys():
+        place = i.split(",")
         beds[i].append(c[i][0])
         toDischarge = copy.deepcopy(c[i])
         #loop through all days from day 1 to today
@@ -107,6 +100,12 @@ def bedsNeeded(c,d):
                 todayDischarge += discharge
                 toDischarge[j-21] = 0
             beds[i].append(max(0,(int(round(yestH + newHosp - deaths - todayDischarge)))))
+        if len(beds[i]) > days:
+            beds[i].remove(beds[i][0])
+        if len(beds[i]) < days:
+            extra = [0] * (days - len(beds[i]))
+            beds[i] = extra + beds[i]
+        writer.writerow([place[0],place[1]] + beds[i])     
     return beds
 
 def main():
@@ -114,23 +113,26 @@ def main():
     end = date(2020,4,21)
     delta = timedelta(days=1)
     tracker = defaultdict(list)
+    days = 2
 	#loop through all available covid files from 3/22/2020 to today
     while start <= end:
         thisDate = start.strftime('%m-%d-%Y')
         link = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/' + thisDate + '.csv'
         editDict(tracker, link)
         start += delta
-    with open('predictCases.csv', mode='w+') as f:
+        days += 1
+    with open('PredictCases.csv', mode='w+') as f:
         writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
-        c = generatePredict(tracker, "cases", writer)
-    with open('predictDeaths.csv', mode='w+') as f:
+        c = generatePredict(tracker, "cases", writer)   
+    with open('PredictDeaths.csv', mode='w+') as f:
         writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
         d = generatePredict(tracker, "deaths", writer)
     #print(tracker["new york, new york"])
     #print(d["new york, new york"])
-    print(bedsNeeded(c,d)["new york, new york"])
-            
-
+    with open('PredictBeds.csv', mode='w+') as f:
+        writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        b = bedsNeeded(c, d, days, writer)
+                
 if __name__ == '__main__':
 	main()
 
