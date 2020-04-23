@@ -1,9 +1,10 @@
 import urllib.request as request
 import csv
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 from datetime import date, timedelta
 import numpy as np
 import copy
+import json
 from numpy.polynomial import Polynomial
 import matplotlib.pyplot as plt
 
@@ -63,15 +64,16 @@ def generatePredict(tracker, condition, writer):
         return iDeaths
 
 #c - time series of new cases from 3/22 to 3 days from the end date. d is corresponding new death time series
-def bedsNeeded(c, d, days, writer):
+def bedsNeeded(c, d, tracker, days, writer):
     beds = defaultdict(list)
     #run simulation for each county
     for i in c.keys():
         place = i.split(",")
-        beds[i].append(c[i][0])
+        beds[i].append(int(round(int(tracker[i][0][0]) * .8)))
+        #beds[i].append(c[i][0])
         toDischarge = copy.deepcopy(c[i])
         #loop through all days from day 1 to today
-        for j in range(1,len(c[i])):
+        for j in range(len(c[i])):
             yestH = beds[i][j-1]
             newHosp = 0.35 * c[i][j]
             deaths = 0.80 * d[i][j]
@@ -110,17 +112,24 @@ def bedsNeeded(c, d, days, writer):
 
 def main():
     start = date(2020,3,22)
-    end = date(2020,4,21)
+    end = date(2020,4,22)
     delta = timedelta(days=1)
     tracker = defaultdict(list)
-    days = 2
+    days = 3
+    dates = []
 	#loop through all available covid files from 3/22/2020 to today
     while start <= end:
         thisDate = start.strftime('%m-%d-%Y')
+        dates.append(thisDate)
         link = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/' + thisDate + '.csv'
         editDict(tracker, link)
         start += delta
         days += 1
+    for i in range(3):
+        dates.append(start.strftime('%m-%d-%Y'))
+        start += delta
+    reverseDates = copy.deepcopy(dates)
+    reverseDates.reverse()
     with open('PredictCases.csv', mode='w+') as f:
         writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
         c = generatePredict(tracker, "cases", writer)   
@@ -131,7 +140,34 @@ def main():
     #print(d["new york, new york"])
     with open('PredictBeds.csv', mode='w+') as f:
         writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
-        b = bedsNeeded(c, d, days, writer)
+        b = bedsNeeded(c, d, tracker, days, writer)
+    #converting bedsNeeded to json
+    forwJson = []
+    revJson = []
+    for i in b.keys():
+        #if i == "new york, new york":
+        count = 0
+        revCount = len(b[i]) - 1
+        place = i.split(",")
+        toAppend = OrderedDict()
+        toAppend["county"] = place[0]
+        toAppend["state"] = place[1]
+        toReverse = OrderedDict()
+        toReverse["county"] = place[0]
+        toReverse["state"] = place[1]
+        for j in b[i]:
+            toAppend[dates[count]] = j
+            toReverse[dates[revCount]] = b[i][revCount]
+            count += 1
+            revCount -= 1
+        forwJson.append(toAppend)
+        revJson.append(toReverse)
+    print(forwJson[0])
+    print(revJson[0])
+    with open('BedsNeeded.txt', mode='w+') as output:
+        json.dump(forwJson,output)
+    with open('ReverseBedsNeeded.txt', mode='w+') as output:
+        json.dump(revJson,output)    
                 
 if __name__ == '__main__':
 	main()

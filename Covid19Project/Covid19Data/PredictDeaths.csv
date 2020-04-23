@@ -1,18 +1,18 @@
-new york, new york,1132,1136,1138
-nassau, new york,102,99,97
-westchester, new york,60,57,55
-suffolk, new york,63,63,62
-rockland, new york,29,29,28
+new york, new york,1044,1023,998
+nassau, new york,97,93,89
+westchester, new york,57,54,51
+suffolk, new york,61,61,60
+rockland, new york,26,25,24
 orange, new york,14,13,12
 albany, new york,1,1,1
 dutchess, new york,2,2,2
-monroe, new york,5,5,5
-erie, new york,14,14,16
+monroe, new york,4,4,4
+erie, new york,12,13,13
 onondaga, new york,1,2,2
 saratoga, new york,0,0,0
 schenectady, new york,1,1,1
 putnam, new york,0,0,0
-rensselaer, new york,0,0,0
+rensselaer, new york,1,1,1
 ulster, new york,1,1,1
 columbia, new york,1,1,1
 tompkins, new york,0,0,0
@@ -31,7 +31,7 @@ allegany, new york,0,0,0
 wyoming, new york,0,0,0
 hamilton, new york,0,0,0
 chenango, new york,0,0,0
-steuben, new york,3,3,3
+steuben, new york,2,3,3
 livingston, new york,0,0,0
 cortland, new york,0,0,0
 delaware, new york,0,0,0
@@ -42,8 +42,8 @@ washington, new york,0,0,0
 schoharie, new york,0,0,0
 fulton, new york,0,0,0
 jefferson, new york,0,0,0
-king, washington,0,0,0
-snohomish, washington,1,1,0
+king, washington,1,0,0
+snohomish, washington,0,0,0
 pierce, washington,2,2,2
 skagit, washington,0,0,0
 island, washington,0,0,0
@@ -70,51 +70,51 @@ mason, washington,0,0,0
 stevens, washington,0,0,0
 san juan, washington,0,0,0
 whitman, washington,0,0,0
-bergen, new jersey,49,46,42
-essex, new jersey,50,46,42
-monmouth, new jersey,15,14,13
-middlesex, new jersey,22,21,20
-hudson, new jersey,60,64,67
-union, new jersey,29,28,27
-morris, new jersey,17,16,15
-ocean, new jersey,12,11,10
-passaic, new jersey,20,19,19
-somerset, new jersey,13,13,13
-mercer, new jersey,11,11,11
+bergen, new jersey,55,54,52
+essex, new jersey,62,63,63
+monmouth, new jersey,16,16,15
+middlesex, new jersey,23,22,21
+hudson, new jersey,58,61,63
+union, new jersey,38,40,42
+morris, new jersey,21,20,20
+ocean, new jersey,17,18,18
+passaic, new jersey,26,28,29
+somerset, new jersey,13,14,14
+mercer, new jersey,13,14,14
 burlington, new jersey,5,5,5
-camden, new jersey,7,7,7
-hunterdon, new jersey,2,2,1
-sussex, new jersey,5,5,5
-warren, new jersey,4,4,4
-gloucester, new jersey,2,2,2
-atlantic, new jersey,2,2,2
+camden, new jersey,8,9,9
+hunterdon, new jersey,2,2,2
+sussex, new jersey,6,6,7
+warren, new jersey,5,5,5
+gloucester, new jersey,2,3,3
+atlantic, new jersey,2,2,3
 cape may, new jersey,1,1,1
 cumberland, new jersey,0,0,0
 salem, new jersey,0,0,0
-los angeles, california,50,52,54
-santa clara, california,1,1,1
-san diego, california,4,3,3
-san mateo, california,0,0,0
+los angeles, california,55,57,60
+santa clara, california,2,2,3
+san diego, california,6,7,7
+san mateo, california,1,1,2
 san francisco, california,0,0,0
 orange, california,1,1,1
-alameda, california,2,2,2
-contra costa, california,1,2,2
+alameda, california,2,2,1
+contra costa, california,1,1,1
 sacramento, california,1,1,1
 marin, california,0,0,0
 san joaquin, california,0,0,0
-riverside, california,6,6,6
+riverside, california,7,7,7
 san luis obispo, california,0,0,0
 ventura, california,0,0,0
 sonoma, california,0,0,0
-san bernardino, california,5,6,6
+san bernardino, california,5,5,5
 santa cruz, california,0,0,0
 solano, california,0,0,0
 santa barbara, california,0,0,0
 placer, california,0,0,0
-tulare, california,1,1,1
+tulare, california,2,2,2
 monterey, california,0,0,0
 yolo, california,1,1,1
-fresno, california,1,0,0
+fresno, california,0,0,0
 imperial, california,0,0,0
 san benito, california,0,0,0
 stanislaus, california,0,0,0
@@ -131,21 +131,21 @@ amador, california,0,0,0
 mono, california,0,0,0
 butte, california,0,0,0
 napa, california,0,0,0
-cook, illinois,75,77,79
+cook, illinois,78,80,81
 dupage, illinois,7,7,7
-lake, illinois,7,7,7
-will, illinois,8,7,7
+lake, illinois,7,7,6
+will, illinois,7,7,7
 kane, illinois,1,1,1
 mchenry, illinois,2,2,2
 mclean, illinois,0,0,0
 sangamon, illinois,0,0,0
 winnebago, illinois,0,0,0
 kendall, illinois,0,0,0
-st. clair, illinois,2,2,2
+st. clair, illinois,1,2,2
 clinton, illinois,0,0,0
 peoria, illinois,0,0,0
 woodford, illinois,0,0,0
-madison, illinois,1,1,2
+madison, illinois,2,2,2
 kankakee, illinois,1,1,1
 champaign, illinois,0,0,0
 cumberland, illinois,0,0,0
@@ -160,10 +160,10 @@ dekalb, illinois,0,0,0
 jo daviess, illinois,0,0,0
 stephenson, illinois,0,0,0
 livingston, illinois,0,0,0
-rock island, illinois,0,0,0
-wayne, michigan,64,60,56
+rock island, illinois,1,1,1
+wayne, michigan,79,79,79
 oakland, michigan,22,20,19
-macomb, michigan,30,30,30
+macomb, michigan,31,31,31
 washtenaw, michigan,2,2,3
 kent, michigan,2,2,2
 genesee, michigan,10,10,10
@@ -178,7 +178,7 @@ charlevoix, michigan,0,0,0
 clinton, michigan,1,1,1
 eaton, michigan,0,0,0
 calhoun, michigan,0,0,0
-saginaw, michigan,3,3,4
+saginaw, michigan,3,4,4
 montcalm, michigan,0,0,0
 bay, michigan,0,0,0
 leelanau, michigan,0,0,0
@@ -193,10 +193,10 @@ gladwin, michigan,0,0,0
 emmet, michigan,0,0,0
 grand traverse, michigan,0,0,0
 roscommon, michigan,0,0,0
-miami-dade, florida,20,20,21
-broward, florida,7,7,6
-palm beach, florida,6,6,5
-hillsborough, florida,1,1,1
+miami-dade, florida,19,19,19
+broward, florida,8,8,8
+palm beach, florida,5,5,4
+hillsborough, florida,1,1,0
 duval, florida,0,0,0
 pinellas, florida,0,0,0
 alachua, florida,0,0,0
@@ -213,12 +213,12 @@ manatee, florida,3,3,3
 pasco, florida,0,0,0
 polk, florida,1,1,1
 citrus, florida,0,0,0
-indian river, florida,0,1,1
+indian river, florida,1,1,1
 clay, florida,0,0,0
-brevard, florida,1,1,1
+brevard, florida,1,1,0
 lake, florida,0,0,0
 leon, florida,0,0,0
-sumter, florida,1,0,0
+sumter, florida,0,0,0
 hernando, florida,0,0,0
 santa rosa, florida,0,0,0
 escambia, florida,1,1,1
@@ -239,24 +239,24 @@ highlands, florida,0,0,0
 bradford, florida,0,0,0
 desoto, florida,0,0,0
 flagler, florida,0,0,0
-orleans, louisiana,3,2,1
-jefferson, louisiana,10,9,7
-st. tammany, louisiana,5,5,5
+orleans, louisiana,4,4,4
+jefferson, louisiana,9,8,7
+st. tammany, louisiana,6,6,5
 east baton rouge, louisiana,6,6,6
-caddo, louisiana,6,7,7
+caddo, louisiana,6,6,6
 st. bernard, louisiana,0,0,0
 ascension, louisiana,1,1,1
 lafourche, louisiana,2,2,3
-terrebonne, louisiana,2,2,2
-st. john the baptist, louisiana,2,1,1
+terrebonne, louisiana,1,1,1
+st. john the baptist, louisiana,1,1,1
 st. charles, louisiana,1,0,0
-lafayette, louisiana,1,1,0
+lafayette, louisiana,1,0,0
 bossier, louisiana,1,0,0
-plaquemines, louisiana,0,0,0
+plaquemines, louisiana,1,1,1
 calcasieu, louisiana,2,2,2
 west baton rouge, louisiana,0,0,0
-st. landry, louisiana,2,3,3
-tangipahoa, louisiana,2,2,1
+st. landry, louisiana,3,3,3
+tangipahoa, louisiana,1,1,1
 washington, louisiana,1,1,1
 iberia, louisiana,1,1,1
 iberville, louisiana,1,1,1
@@ -275,35 +275,35 @@ bienville, louisiana,1,1,1
 claiborne, louisiana,0,0,0
 st. mary, louisiana,2,2,2
 acadia, louisiana,0,0,0
-middlesex, massachusetts,42,45,49
-suffolk, massachusetts,29,32,35
-norfolk, massachusetts,29,32,35
-essex, massachusetts,23,24,26
-worcester, massachusetts,12,13,14
-plymouth, massachusetts,14,14,15
+middlesex, massachusetts,39,41,43
+suffolk, massachusetts,27,29,30
+norfolk, massachusetts,27,29,30
+essex, massachusetts,21,22,23
+worcester, massachusetts,11,12,12
+plymouth, massachusetts,13,13,13
 barnstable, massachusetts,1,1,1
-bristol, massachusetts,9,10,10
+bristol, massachusetts,8,8,9
 berkshire, massachusetts,1,1,1
-hampden, massachusetts,21,23,24
-franklin, massachusetts,1,0,0
+hampden, massachusetts,20,20,21
+franklin, massachusetts,0,0,0
 hampshire, massachusetts,1,1,1
 dukes and nantucket, massachusetts,0,0,0
 dallas, texas,3,3,3
-harris, texas,5,5,5
+harris, texas,5,4,4
 travis, texas,2,2,2
-tarrant, texas,3,3,2
-bexar, texas,2,1,1
+tarrant, texas,2,2,2
+bexar, texas,1,1,1
 collin, texas,1,1,1
-denton, texas,1,0,0
+denton, texas,1,1,1
 fort bend, texas,1,1,1
 mclennan, texas,0,0,0
 brazoria, texas,0,0,0
 montgomery, texas,0,0,0
-brazos, texas,1,1,0
+brazos, texas,1,0,0
 galveston, texas,2,2,2
 smith, texas,0,0,0
 bell, texas,0,0,0
-lubbock, texas,3,3,4
+lubbock, texas,3,3,3
 williamson, texas,0,0,0
 el paso, texas,1,1,1
 hays, texas,0,0,0
@@ -348,8 +348,8 @@ liberty, texas,0,0,0
 burnet, texas,0,0,0
 walker, texas,0,0,0
 fulton, georgia,3,3,3
-cobb, georgia,2,2,2
-bartow, georgia,1,1,1
+cobb, georgia,3,3,3
+bartow, georgia,2,2,1
 dekalb, georgia,2,2,2
 dougherty, georgia,4,4,3
 gwinnett, georgia,3,3,3
@@ -358,7 +358,7 @@ lee, georgia,0,0,0
 carroll, georgia,1,1,1
 clayton, georgia,1,1,1
 richmond, georgia,1,1,1
-floyd, georgia,1,1,1
+floyd, georgia,0,0,0
 fayette, georgia,0,0,0
 clarke, georgia,0,0,0
 hall, georgia,1,1,1
@@ -366,7 +366,7 @@ lowndes, georgia,0,0,0
 coweta, georgia,0,0,0
 henry, georgia,1,1,1
 polk, georgia,0,0,0
-gordon, georgia,0,0,0
+gordon, georgia,0,0,1
 newton, georgia,0,0,0
 troup, georgia,0,0,0
 forsyth, georgia,1,1,1
@@ -384,7 +384,7 @@ laurens, georgia,0,0,0
 muscogee, georgia,0,0,0
 effingham, georgia,0,0,0
 tift, georgia,1,1,1
-spalding, georgia,0,0,0
+spalding, georgia,1,1,1
 worth, georgia,1,1,1
 pickens, georgia,0,0,0
 sumter, georgia,1,1,1
@@ -395,7 +395,7 @@ houston, georgia,0,0,0
 barrow, georgia,0,0,0
 oconee, georgia,1,1,1
 turner, georgia,1,1,1
-bibb, georgia,0,0,0
+bibb, georgia,0,0,1
 miller, georgia,0,0,0
 heard, georgia,0,0,0
 dawson, georgia,0,0,0
@@ -407,17 +407,17 @@ lumpkin, georgia,0,0,0
 butts, georgia,0,0,0
 chattooga, georgia,0,0,0
 twiggs, georgia,0,0,0
-denver, colorado,7,7,8
+denver, colorado,7,7,7
 eagle, colorado,0,0,0
-el paso, colorado,2,1,1
+el paso, colorado,1,1,1
 jefferson, colorado,1,1,1
-arapahoe, colorado,7,7,8
-weld, colorado,3,3,3
-boulder, colorado,1,1,1
+arapahoe, colorado,7,8,8
+weld, colorado,3,2,2
+boulder, colorado,2,2,2
 douglas, colorado,1,1,1
 larimer, colorado,0,0,0
 gunnison, colorado,0,0,0
-adams, colorado,4,4,4
+adams, colorado,3,3,4
 pitkin, colorado,0,0,0
 garfield, colorado,0,0,0
 summit, colorado,0,0,0
@@ -436,24 +436,24 @@ yuma, colorado,0,0,0
 hinsdale, colorado,0,0,0
 montrose, colorado,1,1,1
 san miguel, colorado,0,0,0
-montgomery, pennsylvania,23,26,29
-philadelphia, pennsylvania,37,38,39
-delaware, pennsylvania,11,12,13
-allegheny, pennsylvania,7,8,8
-bucks, pennsylvania,11,12,14
+montgomery, pennsylvania,23,25,27
+philadelphia, pennsylvania,33,33,33
+delaware, pennsylvania,11,12,12
+allegheny, pennsylvania,7,8,9
+bucks, pennsylvania,12,13,14
 monroe, pennsylvania,3,3,3
 chester, pennsylvania,7,8,9
-northampton, pennsylvania,3,3,3
-lehigh, pennsylvania,4,5,5
+northampton, pennsylvania,2,3,3
+lehigh, pennsylvania,4,4,5
 berks, pennsylvania,9,10,11
 cumberland, pennsylvania,0,0,0
 york, pennsylvania,1,2,2
 washington, pennsylvania,0,0,0
-luzerne, pennsylvania,4,5,5
-lancaster, pennsylvania,16,17,19
+luzerne, pennsylvania,5,6,7
+lancaster, pennsylvania,15,16,17
 lackawanna, pennsylvania,5,5,6
 adams, pennsylvania,0,0,0
-westmoreland, pennsylvania,2,2,3
+westmoreland, pennsylvania,2,2,2
 pike, pennsylvania,1,1,1
 beaver, pennsylvania,4,5,5
 lebanon, pennsylvania,1,1,1
@@ -469,13 +469,13 @@ columbia, pennsylvania,1,1,1
 fayette, pennsylvania,0,0,0
 schuylkill, pennsylvania,1,1,1
 mercer, pennsylvania,0,0,0
-davidson, tennessee,1,1,1
-shelby, tennessee,3,3,3
+davidson, tennessee,1,1,0
+shelby, tennessee,3,2,2
 williamson, tennessee,0,0,0
-sumner, tennessee,1,1,0
+sumner, tennessee,1,0,0
 hamilton, tennessee,0,0,0
 rutherford, tennessee,0,0,0
-putnam, tennessee,0,0,1
+putnam, tennessee,0,0,0
 knox, tennessee,0,0,0
 tipton, tennessee,0,0,0
 cheatham, tennessee,0,0,0
@@ -510,7 +510,7 @@ houston, tennessee,0,0,0
 loudon, tennessee,0,0,0
 marion, tennessee,0,0,0
 perry, tennessee,0,0,0
-milwaukee, wisconsin,8,8,7
+milwaukee, wisconsin,7,7,6
 dane, wisconsin,1,1,1
 waukesha, wisconsin,1,1,1
 fond du lac, wisconsin,0,0,0
@@ -539,23 +539,23 @@ chippewa, wisconsin,0,0,0
 marathon, wisconsin,0,0,0
 douglas, wisconsin,0,0,0
 green, wisconsin,0,0,0
-cuyahoga, ohio,5,5,5
-franklin, ohio,2,3,3
+cuyahoga, ohio,6,7,8
+franklin, ohio,3,3,4
 summit, ohio,1,2,2
 lorain, ohio,2,2,2
-hamilton, ohio,3,3,3
+hamilton, ohio,4,4,4
 mahoning, ohio,3,3,3
 butler, ohio,0,0,0
 miami, ohio,0,0,0
 stark, ohio,2,2,2
 medina, ohio,1,1,1
-lucas, ohio,2,2,2
+lucas, ohio,3,3,3
 lake, ohio,0,0,0
 delaware, ohio,0,0,0
-montgomery, ohio,0,0,0
+montgomery, ohio,1,1,1
 clermont, ohio,0,0,0
 trumbull, ohio,1,1,1
-warren, ohio,1,1,2
+warren, ohio,1,1,1
 belmont, ohio,1,1,1
 tuscarawas, ohio,0,0,0
 geauga, ohio,1,1,1
@@ -568,7 +568,7 @@ huron, ohio,0,0,0
 ashland, ohio,0,0,0
 clark, ohio,0,0,0
 richland, ohio,0,0,0
-marion, ohio,0,0,0
+marion, ohio,0,0,1
 licking, ohio,0,0,0
 union, ohio,0,0,0
 erie, ohio,0,0,0
@@ -579,19 +579,19 @@ clinton, ohio,0,0,0
 greene, ohio,0,0,0
 hancock, ohio,0,0,0
 portage, ohio,2,2,2
-wood, ohio,1,2,2
+wood, ohio,1,1,2
 washington, ohio,1,1,1
 knox, ohio,0,0,0
-fairfield, connecticut,42,44,45
-hartford, connecticut,41,45,48
-new haven, connecticut,30,31,33
-tolland, connecticut,1,1,2
+fairfield, connecticut,44,45,47
+hartford, connecticut,44,47,50
+new haven, connecticut,30,32,33
+tolland, connecticut,1,2,2
 litchfield, connecticut,6,6,6
-middlesex, connecticut,4,4,5
+middlesex, connecticut,5,5,5
 new london, connecticut,1,1,1
-windham, connecticut,0,0,0
-mecklenburg, north carolina,3,4,4
-wake, north carolina,1,1,2
+windham, connecticut,1,1,1
+mecklenburg, north carolina,3,3,3
+wake, north carolina,1,1,1
 durham, north carolina,1,1,1
 forsyth, north carolina,0,0,0
 union, north carolina,1,1,1
@@ -600,20 +600,20 @@ harnett, north carolina,0,0,0
 cabarrus, north carolina,0,0,1
 brunswick, north carolina,0,0,0
 iredell, north carolina,0,0,0
-orange, north carolina,0,0,0
+orange, north carolina,1,1,1
 carteret, north carolina,0,0,0
-new hanover, north carolina,0,0,1
+new hanover, north carolina,0,0,0
 buncombe, north carolina,0,0,0
 cherokee, north carolina,0,0,0
-franklin, north carolina,1,2,2
-chatham, north carolina,0,0,0
+franklin, north carolina,2,2,2
+chatham, north carolina,1,1,1
 johnston, north carolina,1,1,1
 onslow, north carolina,0,0,0
-wilson, north carolina,1,1,1
+wilson, north carolina,0,0,1
 gaston, north carolina,0,0,0
 pitt, north carolina,0,0,0
 cumberland, north carolina,1,1,1
-craven, north carolina,0,0,0
+craven, north carolina,0,1,1
 watauga, north carolina,0,0,0
 moore, north carolina,1,1,1
 rowan, north carolina,2,2,2
@@ -635,16 +635,16 @@ davie, north carolina,0,0,0
 montgomery, north carolina,0,0,0
 nash, north carolina,0,0,0
 scotland, north carolina,0,0,0
-montgomery, maryland,11,12,13
-prince george's, maryland,10,10,10
-baltimore, maryland,6,6,6
+montgomery, maryland,12,13,13
+prince george's, maryland,11,11,12
+baltimore, maryland,6,7,7
 baltimore city, maryland,6,6,6
 howard, maryland,1,1,1
 anne arundel, maryland,5,5,5
 harford, maryland,1,1,1
-charles, maryland,2,2,3
-carroll, maryland,2,2,2
-calvert, maryland,0,0,0
+charles, maryland,3,3,4
+carroll, maryland,2,2,1
+calvert, maryland,0,1,1
 wicomico, maryland,0,0,0
 worcester, maryland,0,0,0
 talbot, maryland,0,0,0
@@ -654,35 +654,35 @@ queen anne's, maryland,0,0,0
 somerset, maryland,0,0,0
 washington, maryland,0,0,0
 st. mary's, maryland,1,1,1
-james city, virginia,0,0,0
-fairfax, virginia,3,3,3
+james city, virginia,1,2,2
+fairfax, virginia,7,8,8
 arlington, virginia,2,3,3
-prince william, virginia,0,0,0
+prince william, virginia,2,3,3
 virginia beach, virginia,1,1,1
-loudoun, virginia,0,0,0
-chesterfield, virginia,0,0,0
-henrico, virginia,7,7,8
+loudoun, virginia,1,1,1
+chesterfield, virginia,1,1,1
+henrico, virginia,8,8,9
 richmond, virginia,0,0,0
-alexandria, virginia,1,1,1
+alexandria, virginia,1,2,2
 stafford, virginia,0,0,0
 york, virginia,0,0,0
 williamsburg, virginia,0,0,0
 charlottesville, virginia,0,0,0
 norfolk, virginia,0,0,0
-spotsylvania, virginia,0,0,0
-goochland, virginia,0,0,0
-albemarle, virginia,0,0,0
+spotsylvania, virginia,0,1,1
+goochland, virginia,0,1,1
+albemarle, virginia,0,1,1
 gloucester, virginia,0,0,0
-newport news, virginia,0,0,0
+newport news, virginia,1,1,1
 lee, virginia,0,0,0
 rockingham, virginia,0,0,0
 culpeper, virginia,0,0,0
-hanover, virginia,0,0,0
+hanover, virginia,1,1,1
 prince edward, virginia,0,0,0
-harrisonburg, virginia,0,0,0
+harrisonburg, virginia,1,1,2
 charles city, virginia,0,0,0
-botetourt, virginia,0,0,0
-suffolk, virginia,0,0,0
+botetourt, virginia,0,1,1
+suffolk, virginia,0,1,1
 accomack, virginia,0,0,0
 mecklenburg, virginia,0,0,0
 rockbridge, virginia,0,0,0
@@ -691,7 +691,7 @@ franklin, virginia,0,0,0
 danville, virginia,0,0,0
 bedford, virginia,0,0,0
 amherst, virginia,0,0,0
-fluvanna, virginia,0,0,0
+fluvanna, virginia,1,1,1
 louisa, virginia,0,0,0
 hinds, mississippi,1,1,1
 desoto, mississippi,0,0,0
@@ -709,7 +709,7 @@ jackson, mississippi,0,0,0
 lafayette, mississippi,0,0,0
 copiah, mississippi,0,0,0
 hancock, mississippi,0,0,0
-lincoln, mississippi,1,0,0
+lincoln, mississippi,1,1,1
 lowndes, mississippi,0,0,0
 bolivar, mississippi,0,0,0
 wilkinson, mississippi,0,0,0
@@ -745,28 +745,28 @@ montgomery, mississippi,0,0,0
 pontotoc, mississippi,0,0,0
 scott, mississippi,0,0,0
 tate, mississippi,0,0,0
-marion, indiana,14,14,13
+marion, indiana,13,13,12
 hamilton, indiana,3,3,3
 johnson, indiana,3,3,3
-lake, indiana,4,4,5
+lake, indiana,4,4,4
 hendricks, indiana,1,1,1
 st. joseph, indiana,1,1,1
 howard, indiana,0,0,0
-bartholomew, indiana,1,1,1
+bartholomew, indiana,0,0,0
 franklin, indiana,0,0,0
-clark, indiana,1,0,0
-allen, indiana,3,3,3
+clark, indiana,0,0,0
+allen, indiana,2,3,3
 elkhart, indiana,0,0,0
 boone, indiana,2,2,3
 floyd, indiana,1,1,1
 laporte, indiana,0,0,0
 tippecanoe, indiana,0,0,0
-madison, indiana,2,3,3
+madison, indiana,2,2,2
 vigo, indiana,0,0,0
 grant, indiana,0,0,0
 delaware, indiana,1,1,1
 hancock, indiana,0,0,0
-noble, indiana,0,0,1
+noble, indiana,0,0,0
 adams, indiana,0,0,0
 wells, indiana,0,0,0
 fayette, indiana,0,0,0
@@ -776,7 +776,7 @@ owen, indiana,0,0,0
 vanderburgh, indiana,0,0,0
 shelby, indiana,1,1,1
 scott, indiana,0,0,0
-greene, indiana,0,0,1
+greene, indiana,0,0,0
 monroe, indiana,1,1,1
 miami, indiana,0,0,0
 tipton, indiana,0,0,0
@@ -787,8 +787,8 @@ washington, indiana,0,0,0
 dubois, indiana,0,0,0
 kershaw, south carolina,0,0,0
 richland, south carolina,0,0,0
-greenville, south carolina,1,1,0
-beaufort, south carolina,0,0,0
+greenville, south carolina,1,1,1
+beaufort, south carolina,0,1,1
 charleston, south carolina,0,0,0
 lexington, south carolina,0,0,0
 horry, south carolina,0,0,0
@@ -799,8 +799,8 @@ york, south carolina,0,0,0
 sumter, south carolina,0,0,0
 orangeburg, south carolina,0,0,0
 greenwood, south carolina,0,0,0
-spartanburg, south carolina,0,0,0
-berkeley, south carolina,0,0,0
+spartanburg, south carolina,1,1,1
+berkeley, south carolina,1,1,1
 fairfield, south carolina,0,0,0
 calhoun, south carolina,0,0,0
 dorchester, south carolina,0,0,0
@@ -818,11 +818,11 @@ marlboro, south carolina,0,0,0
 newberry, south carolina,0,0,0
 hampton, south carolina,0,0,0
 jasper, south carolina,0,0,0
-clark, nevada,6,6,5
+clark, nevada,6,6,6
 washoe, nevada,1,1,1
 carson city, nevada,0,0,0
 elko county, nevada,0,0,0
-salt lake, utah,1,1,2
+salt lake, utah,1,1,1
 summit, utah,0,0,0
 davis, utah,0,0,0
 wasatch, utah,0,0,0
@@ -830,7 +830,7 @@ utah, utah,0,0,0
 tooele, utah,0,0,0
 cache, utah,0,0,0
 box elder, utah,0,0,0
-hennepin, minnesota,9,10,10
+hennepin, minnesota,11,12,13
 ramsey, minnesota,1,1,1
 olmsted, minnesota,0,0,0
 dakota, minnesota,0,0,0
@@ -857,7 +857,7 @@ jackson, minnesota,0,0,0
 st. louis, minnesota,1,1,1
 cass, minnesota,0,0,0
 jefferson, arkansas,1,1,1
-pulaski, arkansas,1,1,0
+pulaski, arkansas,1,0,0
 garland, arkansas,0,0,0
 cleburne, arkansas,0,0,0
 washington, arkansas,0,0,0
@@ -875,7 +875,7 @@ sevier, arkansas,0,0,0
 van buren, arkansas,0,0,0
 benton, arkansas,0,0,0
 boone, arkansas,0,0,0
-crittenden, arkansas,1,1,1
+crittenden, arkansas,0,0,0
 greene, arkansas,0,0,0
 polk, arkansas,0,0,0
 sebastian, arkansas,0,0,0
@@ -885,7 +885,7 @@ union, arkansas,0,0,0
 woodruff, arkansas,0,0,0
 washington, oregon,0,0,0
 marion, oregon,0,0,0
-multnomah, oregon,2,2,2
+multnomah, oregon,2,2,1
 linn, oregon,0,0,0
 clackamas, oregon,0,0,0
 deschutes, oregon,0,0,0
@@ -900,9 +900,9 @@ polk, oregon,0,0,0
 grant, oregon,0,0,0
 union, oregon,0,0,0
 josephine, oregon,0,0,0
-jefferson, alabama,1,1,1
+jefferson, alabama,2,2,2
 shelby, alabama,0,0,0
-lee, alabama,1,2,2
+lee, alabama,2,2,2
 madison, alabama,0,0,0
 tuscaloosa, alabama,0,0,0
 elmore, alabama,0,0,0
@@ -914,17 +914,17 @@ mobile, alabama,3,3,4
 lauderdale, alabama,0,0,0
 cullman, alabama,0,0,0
 limestone, alabama,0,0,0
-calhoun, alabama,0,0,1
+calhoun, alabama,0,0,0
 talladega, alabama,0,0,0
 walker, alabama,0,0,0
 jackson, alabama,0,0,0
 lamar, alabama,0,0,0
 washington, alabama,0,0,0
 marion, alabama,0,0,0
-maricopa, arizona,5,5,5
+maricopa, arizona,6,6,7
 pima, arizona,5,6,6
 pinal, arizona,1,1,1
-coconino, arizona,2,2,2
+coconino, arizona,2,2,3
 navajo, arizona,1,1,2
 yavapai, arizona,0,0,0
 apache, arizona,1,1,1
@@ -932,7 +932,7 @@ graham, arizona,0,0,0
 santa cruz, arizona,0,0,0
 yuma, arizona,0,0,0
 cochise, arizona,0,0,0
-jefferson, kentucky,5,5,5
+jefferson, kentucky,5,6,6
 fayette, kentucky,0,0,0
 harrison, kentucky,0,0,0
 montgomery, kentucky,0,0,0
@@ -956,9 +956,9 @@ boone, missouri,0,0,0
 greene, missouri,0,0,0
 st. louis city, missouri,4,4,4
 jackson, missouri,1,1,1
-cass, missouri,1,1,1
+cass, missouri,0,0,0
 cole, missouri,0,0,0
-st. charles, missouri,1,2,2
+st. charles, missouri,2,2,2
 christian, missouri,0,0,0
 henry, missouri,0,0,0
 scott, missouri,0,0,0
@@ -969,17 +969,17 @@ adair, missouri,0,0,0
 johnson, missouri,0,0,0
 bates, missouri,0,0,0
 johnson, iowa,0,0,0
-polk, iowa,2,2,2
+polk, iowa,1,2,2
 dallas, iowa,0,0,0
 allamakee, iowa,0,0,0
 dubuque, iowa,0,0,0
 linn, iowa,2,2,2
 harrison, iowa,0,0,0
-black hawk, iowa,0,0,0
+black hawk, iowa,1,1,1
 washington, iowa,0,0,0
 tama, iowa,1,1,1
 pottawattamie, iowa,0,0,0
-muscatine, iowa,0,0,0
+muscatine, iowa,1,1,1
 cerro gordo, iowa,0,0,0
 carroll, iowa,0,0,0
 adair, iowa,0,0,0
@@ -992,7 +992,7 @@ woodbury, iowa,0,0,0
 kossuth, iowa,0,0,0
 sioux, iowa,0,0,0
 poweshiek, iowa,0,0,0
-cumberland, maine,1,0,0
+cumberland, maine,1,1,1
 york, maine,0,0,0
 lincoln, maine,0,0,0
 oxford, maine,0,0,0
@@ -1030,7 +1030,7 @@ mcclain, oklahoma,0,0,0
 muskogee, oklahoma,0,0,0
 noble, oklahoma,0,0,0
 johnson, kansas,3,3,3
-wyandotte, kansas,3,4,4
+wyandotte, kansas,3,3,3
 douglas, kansas,0,0,0
 leavenworth, kansas,0,0,0
 butler, kansas,0,0,0
@@ -1044,20 +1044,20 @@ riley, kansas,0,0,0
 reno, kansas,0,0,0
 mitchell, kansas,0,0,0
 ford, kansas,0,0,0
-bernalillo, new mexico,1,1,1
+bernalillo, new mexico,2,2,2
 santa fe, new mexico,0,0,0
 sandoval, new mexico,0,0,0
 taos, new mexico,0,0,0
 socorro, new mexico,0,0,0
 dona ana, new mexico,0,0,0
 san miguel, new mexico,0,0,0
-mckinley, new mexico,0,0,0
+mckinley, new mexico,1,1,1
 lea, new mexico,0,0,0
 honolulu, hawaii,0,0,0
 maui, hawaii,0,0,0
 kauai, hawaii,0,0,0
 new castle, delaware,3,3,3
-sussex, delaware,3,3,4
+sussex, delaware,3,4,4
 kent, delaware,1,1,1
 chittenden, vermont,1,1,1
 windsor, vermont,0,0,0
@@ -1099,7 +1099,7 @@ ravalli, montana,0,0,0
 burleigh, north dakota,0,0,0
 morton, north dakota,0,0,0
 ward, north dakota,0,0,0
-cass, north dakota,0,1,1
+cass, north dakota,1,1,1
 ramsey, north dakota,0,0,0
 pierce, north dakota,0,0,0
 fremont, wyoming,0,0,0
@@ -1111,7 +1111,7 @@ campbell, wyoming,0,0,0
 natrona, wyoming,0,0,0
 carbon, wyoming,0,0,0
 beadle, south dakota,0,0,0
-minnehaha, south dakota,0,0,0
+minnehaha, south dakota,0,0,1
 pennington, south dakota,0,0,0
 charles mix, south dakota,0,0,0
 davison, south dakota,0,0,0
@@ -1204,7 +1204,7 @@ yukon-koyukuk, alaska,0,0,0
 gila, arizona,0,0,0
 greenlee, arizona,0,0,0
 la paz, arizona,0,0,0
-mohave, arizona,0,1,1
+mohave, arizona,0,0,1
 arkansas, arkansas,0,0,0
 ashley, arkansas,0,0,0
 baxter, arkansas,0,0,0
@@ -1306,7 +1306,7 @@ san juan, colorado,0,0,0
 sedgwick, colorado,0,0,0
 teller, colorado,0,0,0
 washington, colorado,0,0,0
-district of columbia, district of columbia,9,9,9
+district of columbia, district of columbia,10,10,11
 calhoun, florida,0,0,0
 dixie, florida,0,0,0
 franklin, florida,0,0,0
@@ -1355,7 +1355,7 @@ crisp, georgia,0,0,0
 dade, georgia,0,0,0
 decatur, georgia,0,0,0
 dodge, georgia,0,0,0
-dooly, georgia,0,1,1
+dooly, georgia,1,1,1
 echols, georgia,0,0,0
 elbert, georgia,0,0,0
 emanuel, georgia,0,0,0
@@ -1366,7 +1366,7 @@ gilmer, georgia,0,0,0
 glascock, georgia,0,0,0
 grady, georgia,0,0,0
 greene, georgia,0,0,0
-habersham, georgia,0,0,0
+habersham, georgia,0,1,1
 hancock, georgia,0,0,0
 haralson, georgia,0,0,0
 harris, georgia,0,0,0
@@ -1388,7 +1388,7 @@ marion, georgia,0,0,0
 mcduffie, georgia,0,0,0
 mcintosh, georgia,0,0,0
 meriwether, georgia,0,0,0
-mitchell, georgia,2,2,1
+mitchell, georgia,1,1,1
 montgomery, georgia,0,0,0
 morgan, georgia,0,0,0
 murray, georgia,0,0,0
@@ -1677,7 +1677,7 @@ cheyenne, kansas,0,0,0
 clark, kansas,0,0,0
 clay, kansas,0,0,0
 cloud, kansas,0,0,0
-coffey, kansas,1,1,1
+coffey, kansas,1,1,0
 comanche, kansas,0,0,0
 cowley, kansas,0,0,0
 crawford, kansas,0,0,0
@@ -1769,7 +1769,7 @@ breckinridge, kentucky,0,0,0
 bullitt, kentucky,0,0,0
 butler, kentucky,0,0,0
 caldwell, kentucky,0,0,0
-campbell, kentucky,0,0,0
+campbell, kentucky,1,1,1
 carlisle, kentucky,0,0,0
 carroll, kentucky,0,0,0
 carter, kentucky,0,0,0
@@ -1891,8 +1891,8 @@ piscataquis, maine,0,0,0
 somerset, maine,0,0,0
 waldo, maine,1,1,1
 washington, maine,0,0,0
-allegany, maryland,0,0,0
-cecil, maryland,0,0,0
+allegany, maryland,0,0,1
+cecil, maryland,0,1,1
 dorchester, maryland,0,0,0
 garrett, maryland,0,0,0
 kent, maryland,0,0,0
@@ -1921,11 +1921,11 @@ ionia, michigan,0,0,0
 iosco, michigan,0,0,0
 iron, michigan,0,0,0
 isabella, michigan,0,0,0
-kalamazoo, michigan,1,0,0
+kalamazoo, michigan,1,1,1
 kalkaska, michigan,0,0,0
 keweenaw, michigan,0,0,0
 lake, michigan,0,0,0
-lapeer, michigan,2,3,3
+lapeer, michigan,2,2,3
 lenawee, michigan,0,0,0
 luce, michigan,0,0,0
 mackinac, michigan,0,0,0
@@ -2083,7 +2083,7 @@ knox, missouri,0,0,0
 laclede, missouri,0,0,0
 lafayette, missouri,0,0,0
 lawrence, missouri,0,0,0
-lewis, missouri,0,0,0
+lewis, missouri,0,0,1
 lincoln, missouri,0,0,0
 linn, missouri,0,0,0
 livingston, missouri,0,0,0
@@ -2303,7 +2303,7 @@ otero, new mexico,0,0,0
 quay, new mexico,0,0,0
 rio arriba, new mexico,0,0,0
 roosevelt, new mexico,0,0,0
-san juan, new mexico,2,2,2
+san juan, new mexico,3,3,3
 sierra, new mexico,0,0,0
 torrance, new mexico,0,0,0
 union, new mexico,0,0,0
@@ -2340,7 +2340,7 @@ camden, north carolina,0,0,0
 caswell, north carolina,0,0,0
 clay, north carolina,0,0,0
 cleveland, north carolina,0,0,0
-columbus, north carolina,0,0,0
+columbus, north carolina,1,1,1
 currituck, north carolina,0,0,0
 dare, north carolina,0,0,0
 duplin, north carolina,0,0,0
@@ -2368,7 +2368,7 @@ polk, north carolina,0,0,0
 randolph, north carolina,0,0,0
 richmond, north carolina,0,0,0
 rockingham, north carolina,0,0,0
-rutherford, north carolina,0,0,1
+rutherford, north carolina,0,0,0
 stanly, north carolina,0,0,0
 stokes, north carolina,0,0,0
 surry, north carolina,0,0,0
@@ -2429,7 +2429,7 @@ walsh, north dakota,0,0,0
 wells, north dakota,0,0,0
 williams, north dakota,0,0,0
 adams, ohio,0,0,0
-allen, ohio,1,1,2
+allen, ohio,1,1,1
 athens, ohio,0,0,0
 auglaize, ohio,0,0,0
 brown, ohio,0,0,0
@@ -2462,7 +2462,7 @@ perry, ohio,0,0,0
 pickaway, ohio,1,1,1
 pike, ohio,0,0,0
 preble, ohio,0,0,0
-putnam, ohio,0,0,0
+putnam, ohio,0,0,1
 ross, ohio,0,0,0
 sandusky, ohio,0,0,0
 scioto, ohio,0,0,0
@@ -2480,7 +2480,7 @@ beaver, oklahoma,0,0,0
 beckham, oklahoma,0,0,0
 blaine, oklahoma,0,0,0
 bryan, oklahoma,0,0,0
-caddo, oklahoma,0,0,0
+caddo, oklahoma,0,1,1
 carter, oklahoma,0,0,0
 cherokee, oklahoma,0,0,0
 choctaw, oklahoma,0,0,0
@@ -2569,7 +2569,7 @@ forest, pennsylvania,0,0,0
 fulton, pennsylvania,0,0,0
 greene, pennsylvania,0,0,0
 huntingdon, pennsylvania,0,0,0
-indiana, pennsylvania,1,1,1
+indiana, pennsylvania,0,0,1
 jefferson, pennsylvania,0,0,0
 juniata, pennsylvania,0,0,0
 lawrence, pennsylvania,0,0,0
@@ -2779,7 +2779,7 @@ goliad, texas,0,0,0
 gonzales, texas,0,0,0
 gray, texas,0,0,0
 grayson, texas,0,0,0
-hale, texas,0,0,0
+hale, texas,1,1,1
 hall, texas,0,0,0
 hamilton, texas,0,0,0
 hansford, texas,0,0,0
@@ -2969,14 +2969,14 @@ galax, virginia,0,0,0
 giles, virginia,0,0,0
 grayson, virginia,0,0,0
 greene, virginia,0,0,0
-greensville, virginia,0,0,0
+greensville, virginia,1,1,1
 halifax, virginia,0,0,0
 hampton, virginia,0,0,0
 henry, virginia,0,0,0
 highland, virginia,0,0,0
 hopewell, virginia,0,0,0
 king and queen, virginia,0,0,0
-king george, virginia,0,0,0
+king george, virginia,1,1,1
 king william, virginia,0,0,0
 lancaster, virginia,0,0,0
 lexington, virginia,0,0,0
@@ -3001,13 +3001,13 @@ patrick, virginia,0,0,0
 petersburg, virginia,0,0,0
 pittsylvania, virginia,0,0,0
 poquoson, virginia,0,0,0
-portsmouth, virginia,1,1,1
+portsmouth, virginia,0,1,1
 powhatan, virginia,0,0,0
 prince george, virginia,0,0,0
 pulaski, virginia,0,0,0
 radford, virginia,0,0,0
 rappahannock, virginia,0,0,0
-richmond city, virginia,1,1,2
+richmond city, virginia,1,1,1
 roanoke, virginia,0,0,0
 roanoke city, virginia,0,0,0
 russell, virginia,0,0,0
@@ -3021,7 +3021,7 @@ surry, virginia,0,0,0
 sussex, virginia,0,0,0
 tazewell, virginia,0,0,0
 warren, virginia,0,0,0
-washington, virginia,0,0,0
+washington, virginia,0,1,1
 waynesboro, virginia,0,0,0
 westmoreland, virginia,0,0,0
 winchester, virginia,0,0,0
@@ -3143,7 +3143,7 @@ uinta, wyoming,0,0,0
 washakie, wyoming,0,0,0
 weston, wyoming,0,0,0
 garfield, washington,0,0,0
-kansas city, missouri,1,1,1
+kansas city, missouri,1,1,0
 out of mi, michigan,0,0,0
 out of tn, tennessee,0,0,0
 out of ut, utah,0,0,0
@@ -3152,11 +3152,11 @@ out of co, colorado,0,0,0
 out of hi, hawaii,0,0,0
 washington county, utah,0,0,0
 federal correctional institution (fci), michigan,0,0,0
-michigan department of corrections (mdoc), michigan,0,0,0
-out of ga, georgia,2,0,0
+michigan department of corrections (mdoc), michigan,0,1,2
+out of ga, georgia,0,0,0
 bear river, utah,0,0,0
 central utah, utah,0,0,0
 southeast utah, utah,0,0,0
 southwest utah, utah,0,0,0
 tricounty, utah,0,0,0
-weber-morgan, utah,2,3,5
+weber-morgan, utah,7,4,0
