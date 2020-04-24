@@ -30,7 +30,6 @@ public class HospCDReducer
     if (totalCases != 0) {
       //key is city!county!state and value is deviation of %deaths related to respiratory illness compared to the national average
       context.write(key, new Text(formatDeviation));
-      //context.write(key, new Text(totalDeviation.toString()));
     }
     else{
       //complications data was not available

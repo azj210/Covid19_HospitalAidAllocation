@@ -17,15 +17,23 @@ public class CovidMapper
 		   		//new york city instead of new york county edge case
 		   		if (line[1].equals("new york city")){
 		   			String keyVal = "new york" + "!" + line[2];
-			   		String result = line[7] + "!" + line[8];
+		   			String res = String.format("%.2f",(Float.parseFloat(line[8]) / Float.parseFloat(line[7])) * 100);
+			   		String result = line[7] + "!" + line[8] + "!" + res;
 			   		//key is county!state and value is confirmed_cases!deaths		
 			    	context.write(new Text(keyVal), new Text(result)); 
 		   		}
 		   		else{
 		   			String keyVal = line[1] + "!" + line[2];
-			   		String result = line[7] + "!" + line[8];
-			   		//key is county!state and value is confirmed_cases!deaths		
-			    	context.write(new Text(keyVal), new Text(result)); 
+		   			if (line[7].equals("0")){
+		   				String result = line[7] + "!" + line[8] + "!" + "0";
+		   				//key is county!state and value is confirmed_cases!deaths!deathrate		
+			    		context.write(new Text(keyVal), new Text(result)); 
+		   			}
+		   			else{
+		   				String res = String.format("%.2f",(Float.parseFloat(line[8]) / Float.parseFloat(line[7])) * 100);
+		   				String result = line[7] + "!" + line[8] + "!" + res;
+		   				context.write(new Text(keyVal), new Text(result)); 
+		   			}
 		   		}
 		   	}
 	    }
