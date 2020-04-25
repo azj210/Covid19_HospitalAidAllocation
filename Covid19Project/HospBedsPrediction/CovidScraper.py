@@ -16,11 +16,11 @@ def editDict(dictInput, link):
         if len(line) > 2 and line[1] == "New York City":
             dictInput["new york" + ',' + line[2].lower()].append([line[7],line[8]])
         elif len(line) > 2 and line[1] != 'Admin2' and line[1] != '' and line[1] != 'Unassigned' and line[1] != 'unassigned' and line[3] == 'US':
-            	#line[7] is confirmed and line[8] is deaths
+            #line[7] is confirmed and line[8] is deaths
             dictInput[line[1].lower() + ',' + line[2].lower()].append([line[7],line[8]])
 
 def predict(x, y, pred):
-    #quadratic regression: predicting cases 3 days out
+    #quadratic regression: predicting cases for pred days out
     coeffs = np.polyfit(x, y, 2)
     futureCases = []
     for i in range(len(x),len(x)+pred):
@@ -32,36 +32,26 @@ def predict(x, y, pred):
     return futureCases
 
 def generatePredict(tracker, condition, writer, days):
-    iCases = defaultdict(int)
-    iDeaths = defaultdict(int)
+    res = defaultdict(int)
     for i in tracker.keys():
         place = i.split(",")
         #error handling for if there is 2 days or less worth of data
         if len(tracker[i]) > 2:
             data = tracker[i]
             time = [t for t in range (1,len(tracker[i]))]
+            cases = []
             if condition == "cases":
-                #new cases 
-                cases = []
                 for j in range(1,len(data)):
                     cases.append(max(0,(int(data[j][0]) - int(data[j-1][0]))))
-                #calculate number of new cases 2 days out
-                futureCases = predict(time, cases, days)
-                writer.writerow([place[0],place[1]] + futureCases)
-                cases += futureCases
-                iCases[i] = cases
             else:
-                deaths = []
                 for j in range(1,len(data)):
-                    deaths.append(max(0,(int(data[j][1]) - int(data[j-1][1]))))  
-                futureDeaths = predict(time, deaths, days)
-                writer.writerow([place[0],place[1]] + futureDeaths)
-                deaths += futureDeaths
-                iDeaths[i] = deaths
-    if condition == "cases":
-        return iCases
-    else:
-        return iDeaths
+                    cases.append(max(0,(int(data[j][1]) - int(data[j-1][1]))))  
+            #calculate number of new cases or deaths 2 days out
+            futureCases = predict(time, cases, days)
+            writer.writerow([place[0],place[1]] + futureCases)
+            cases += futureCases
+            res[i] = cases
+    return res
 
 #c - time series of new cases from 3/22 to 2 days from the end date. d is corresponding new death time series
 def bedsNeeded(c, d, tracker, days, writer):
@@ -174,11 +164,9 @@ def main():
         json.dump(forwJson,output)
     #with open('ReverseBedsNeeded.json', mode='w+') as output:
         #json.dump(revJson,output) 
-    print(forwJson[0])
-                
+
 if __name__ == '__main__':
 	main()
-
 
 
 
