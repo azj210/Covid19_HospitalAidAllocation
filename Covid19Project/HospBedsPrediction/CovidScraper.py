@@ -64,9 +64,7 @@ def bedsNeeded(c, d, tracker, days, writer):
         toDischarge = [round(z * 0.3 * 0.75) for z in copy.deepcopy(c[i])] 
         #loop through all days from day 1 to today
         for j in range(len(c[i])):
-            yestH = beds[i][j]
-            newHosp = 0.3 * c[i][j]
-            deaths = 0.8 * d[i][j]
+            yestH, newHosp, deaths = beds[i][j], 0.3 * c[i][j], 0.8 * d[i][j] 
             #calculate people to discharge today
             todayDischarge = 0
             for k in dischargeAmt.keys():
@@ -89,7 +87,7 @@ def main():
     end = date(2020,4,24)
     delta = timedelta(days=1)
     tracker = defaultdict(list)
-    days, days2 = 100, 100
+    days, days2 = 90, 90
     dates = []
 	#loop through all available covid files from 3/22/2020 to today
     while start <= end:
@@ -126,11 +124,9 @@ def main():
     with open('BedsNeeded.json', mode='w+') as output:
         json.dump(forwJson,output)
     
-    print(forwJson[0])
-
-    
 if __name__ == '__main__':
 	main()
+
 
 
 
