@@ -5,8 +5,6 @@ from datetime import date, timedelta
 import numpy as np
 import copy
 import json
-from numpy.polynomial import Polynomial
-import matplotlib.pyplot as plt
 
 def editDict(dictInput, link):
     #loop through the file and add the [confirmed,deaths] as a value to key county,state in dict
@@ -46,31 +44,30 @@ def generatePredict(tracker, condition, writer, days):
             else:
                 for j in range(1,len(data)):
                     cases.append(max(0,(int(data[j][1]) - int(data[j-1][1]))))  
-            #calculate number of new cases or deaths 2 days out
+            #calculate number of new cases or deaths "days" days out
             futureCases = predict(time, cases, days)
             writer.writerow([place[0],place[1]] + futureCases)
             cases += futureCases
             res[i] = cases
     return res
 
-#c - time series of new cases from 3/22 to 2 days from the end date. d is corresponding new death time series
+#c - time series of new cases from 3/22 to "days" days from the end date. d is corresponding new death time series
 def bedsNeeded(c, d, tracker, days, writer):
     beds = defaultdict(list)
     dischargeAmt = {15:(1/4), 21:(1/3), 26:(1/2), 32:1}
     #run simulation for each county
     for i in c.keys():
         place = i.split(",")
-        beds[i].append(int(round(int(tracker[i][0][0]) * .8)))
-        #beds[i].append(c[i][0])
-        toDischarge = copy.deepcopy(c[i])
+        #Of the initial reported numbers, around 75% are in the hospital
+        beds[i].append(int(round(int(tracker[i][0][0]) * .75)))
+        #30% of people need hospitalization and of those 30%, it can be assumed that 75% will be discharged
+        toDischarge = [round(z * 0.3 * 0.75) for z in copy.deepcopy(c[i])] 
         #loop through all days from day 1 to today
         for j in range(len(c[i])):
-            yestH = beds[i][j-1]
-            newHosp = 0.4 * c[i][j]
-            deaths = 0.80 * d[i][j]
+            yestH = beds[i][j]
+            newHosp = 0.3 * c[i][j]
+            deaths = 0.8 * d[i][j]
             #calculate people to discharge today
-            if j >= 7:
-                toDischarge[j-7] -= deaths
             todayDischarge = 0
             for k in dischargeAmt.keys():
                 if j >= k:
@@ -78,30 +75,6 @@ def bedsNeeded(c, d, tracker, days, writer):
                     discharge = dischargeAmt[k] * (toDischarge[j-k])
                     todayDischarge += discharge
                     toDischarge[j-k] -= discharge
-                    """
-                    if k == 32:
-                        toDischarge[j-k] = 0
-            if j >= 15:
-                #discharge 1/4 people from 15 days ago
-                discharge =  (1/4) * (toDischarge[j-15])
-                todayDischarge += discharge
-                toDischarge[j-15] -= discharge
-            if j >= 21:
-                #discharge 1/3 people from 21 days ago
-                discharge =  (1/3) * (toDischarge[j-21])
-                todayDischarge += discharge
-                toDischarge[j-21] -= discharge
-            if j >= 26:
-                #discharge 1/2 people from 26 days ago
-                discharge =  (1/2) * (toDischarge[j-26])
-                todayDischarge += discharge
-                toDischarge[j-26] -= discharge
-            if j >= 32:
-                #discharge remaining people from 32 days ago
-                discharge = toDischarge[j-32]
-                todayDischarge += discharge
-                toDischarge[j-32] = 0
-            """
             beds[i].append(max(0,(int(round(yestH + newHosp - deaths - todayDischarge)))))
         if len(beds[i]) > days:
             beds[i].remove(beds[i][0])
@@ -116,7 +89,7 @@ def main():
     end = date(2020,4,24)
     delta = timedelta(days=1)
     tracker = defaultdict(list)
-    days, days2 = 2, 2
+    days, days2 = 100, 100
     dates = []
 	#loop through all available covid files from 3/22/2020 to today
     while start <= end:
@@ -129,8 +102,6 @@ def main():
     for i in range(days2):
         dates.append(start.strftime('%m-%d-%Y'))
         start += delta
-    reverseDates = copy.deepcopy(dates)
-    reverseDates.reverse()
     with open('PredictCases.csv', mode='w+') as f:
         writer = csv.writer(f, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
         c = generatePredict(tracker, "cases", writer, days2)   
@@ -142,29 +113,22 @@ def main():
         b = bedsNeeded(c, d, tracker, days, writer)
     #converting bedsNeeded to json
     forwJson = []
-    #revJson = []
     for i in b.keys():
         count = 0
-        #revCount = len(b[i]) - 1
         place = i.split(",")
         toAppend = OrderedDict()
         toAppend["county"] = place[0]
         toAppend["state"] = place[1]
-        #toReverse = OrderedDict()
-        #toReverse["county"] = place[0]
-        #toReverse["state"] = place[1]
         for j in b[i]:
             toAppend[dates[count]] = j
-            #toReverse[dates[revCount]] = b[i][revCount]
             count += 1
-            #revCount -= 1
         forwJson.append(toAppend)
-        #revJson.append(toReverse)
     with open('BedsNeeded.json', mode='w+') as output:
         json.dump(forwJson,output)
-    #with open('ReverseBedsNeeded.json', mode='w+') as output:
-        #json.dump(revJson,output) 
+    
+    print(forwJson[0])
 
+    
 if __name__ == '__main__':
 	main()
 
