@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Hospital & Population Analytics</title>
+    <link rel="stylesheet" href = "Style.css">
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script src="Testpage.js">  </script>
+</head>
+<body onload = "initViz();">
+    <div class = "container">
+        <div class = "menu">
+            <ul>
+                <li class="logo"><img src = "hospital.png"></li>
+                <li>US Hospital Capacity by County</li>
+            </ul>
+            <button class="btn left">Beds Needed</button>
+            <button class="btn right">At Risk Population</button>
+            <txt class ="descrip">*At risk population is defined by individuals over the age of 55.</txt>
+        </div>
+        <div class = "bannner">
+            <div class = "description"> 
+                <p>Hold down shift, click down on mouse, and move cursor around to change the focus of the map</p>
+            </div>
+        </div>
+        <div id="vizContainer"></div>
+    </div>
+
+</body>
+</html>
