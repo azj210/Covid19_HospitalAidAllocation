@@ -8,11 +8,17 @@
     height: 100%;
     background: #FFFFFF;
 }
+.container2{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    margin-top: 3%;    
+}
 .menu ul{
     display: inline-flex;
     width:50%;  
-    margin-top: 2.5%;
-    margin-bottom: 2%;
+    margin-top: 1.75%;
+    margin-bottom: 1.75%;
     margin-right: 5%;
     margin-left: 3%;
 }
@@ -42,6 +48,7 @@
     font-size: 90%;
     cursor: pointer;
     display: inline-block;
+    margin-bottom: 1.75%;  
   }
   /* hover over */
   .btn:hover {background: #eee;}
@@ -55,6 +62,15 @@
     border-style: inset; 
     border-width: 2.3px;
     border-color: #4682B4;
+}
+.line2{  
+    display: block; 
+    margin-top: 4.5%;
+    margin-bottom: -3%;
+    overflow: hidden; 
+    border-style: inset; 
+    border-width: 2.3px;
+    border-color: #DAA520;
 }
 .note{
     background-color: inherit;
@@ -82,4 +98,9 @@
     margin-left: 3.9%;
     cursor: pointer;
     display: inline-block;
+}
+.key img{
+    width: 90%;
+    margin-left: 45%;
+    margin-top: -4%;
 }

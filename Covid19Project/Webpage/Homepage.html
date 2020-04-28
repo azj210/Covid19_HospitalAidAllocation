@@ -7,14 +7,15 @@
     <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script src="Button.js">  </script>
 </head>
-<body onload = "initViz();" class ="">
+<body onload = "initViz(), initViz2();" class ="">
+    <!--Hospital Beds View-->
     <div class = "container">   
         <div class = "menu">
             <ul>            
                 <li class="logo"><img src = "hospital.png"></li>
                 <li>US Hospital Capacity by County</li>
             </ul>
-            <button class="btn">Beds Needed</button>
+            <button class="btn">Methodology</button>
             <button class="btn">At Risk Population</button>
             <div class = "line"></div>
             <div class = "note">
@@ -29,5 +30,28 @@
         <div id="vizContainer"></div>
     </div>
 
+    <div class = "line2 "></div>
+
+    <!--Aggregate Data View-->  
+    <div class = "container2">   
+        <div class = "menu">
+            <ul>            
+                <li class="logo"><img src = "hospital.png"></li>
+                <li>Aggregate Hospital & Demographics Data</li>
+            </ul>
+            <button class="btn">Methodology</button>
+            <button class="btn">At Risk Population</button>
+            <div class = "line"></div>
+            <div class = "note">
+                <li class = "key"><img src = "key.png"></li>
+            </div>
+        </div>
+        <div class = "bannner">
+            <div class = "description"> 
+                <p>Hold down shift, click down on mouse, and move cursor around to change the focus of the map</p>
+            </div>
+        </div>
+        <div id="vizContainer2"></div>
+    </div>
 </body>
 </html>
