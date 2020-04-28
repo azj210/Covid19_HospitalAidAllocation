@@ -13,14 +13,30 @@
         <div class = "menu">
             <ul>            
                 <li class="logo"><img src = "hospital.png"></li>
-                <li>US Hospital Capacity by County</li>
+                <li>US Hospital Capacity by County</li> 
             </ul>
-            <button class="btn">Methodology</button>
-            <button class="btn">At Risk Population</button>
+            <button id="click" class="btn">Methodology - Cases/Deaths</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">After calculating new cases/deaths every day for each county starting from 3/22, I took the calculated data and fit the data set using a least squares polynomial fit function with days as the independent variable and cases or deaths as the dependent variable. Taking the coefficients that minimize squared error, I used the resultant equation to predict new cases/deaths based on days since 3/22.</a>
+            </div>
+            <script>
+            //when user clicks button, bring out the description
+            document.getElementById("click").onclick = function() {button1()};
+            </script>
+            <button id="click2" class="btn">Methodology - Hospitalizations</button>
+            <div id="myDropdown2" class="dropdown-content">
+                <a href="#hey">test.</a>
+            </div>
+            <script>
+            //when user clicks button, bring out the description
+            document.getElementById("click2").onclick = function() {button2()};
+            </script>   
             <div class = "line"></div>
+            <!--
             <div class = "note">
                 <p>*At risk population is defined by individuals over the age of 55.</p>
             </div>
+                -->
         </div>
         <div class = "bannner">
             <div class = "description"> 
@@ -39,8 +55,14 @@
                 <li class="logo"><img src = "hospital.png"></li>
                 <li>Aggregate Hospital & Demographics Data</li>
             </ul>
-            <button class="btn">Methodology</button>
-            <button class="btn">At Risk Population</button>
+            <button id="click3" class="btnCent">Methodology</button>
+            <div id="myDropdown3" class="dropdown-content2">
+                <a href="#home">Hospital Quality is defined by reported deaths from: COPD, Pneumonia, and Postoperative Respiratory Failure. These measures were used since Covid19 is a respiratory disease. The number provided is the deviation of a county's hospitals' deathrate from the national average with positive deviation being better and negative deviation being worse. <br> For population data, individuals over the age of 55 were included since that group is the most susceptible to deaths and hospitalization from Covid19.</a>
+            </div>  
+            <script>
+            //when user clicks button, bring out the description
+            document.getElementById("click3").onclick = function() {button3()};
+            </script>   
             <div class = "line"></div>
             <div class = "note">
                 <li class = "key"><img src = "key.png"></li>
@@ -55,3 +77,4 @@
     </div>
 </body>
 </html>
+

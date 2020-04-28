@@ -44,11 +44,26 @@
     border: inherit;
     border-radius: 8%;
     background-color: #DCDCDC;
-    padding: 0.7% 3.2%;
+    padding: 0.7% 1.75%;
     font-size: 90%;
     cursor: pointer;
     display: inline-block;
     margin-bottom: 1.75%;  
+  }
+  /* hover over */
+  .btn:hover {background: #eee;}
+  .left {color: rgb(0, 0, 0);}
+  .right {color: rgb(0, 0, 0);}
+.btnCent {
+    border: inherit;
+    border-radius: 8%;
+    background-color: #DCDCDC;
+    padding: 0.7% 5%;
+    font-size: 90%;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 1.75%; 
+    margin-left: 14%; 
   }
   /* hover over */
   .btn:hover {background: #eee;}
@@ -104,3 +119,48 @@
     margin-left: 45%;
     margin-top: -4%;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #DAA520;
+    min-width: 30%;
+    overflow: auto;
+    box-shadow: 10% 10% 10% 10% rgba(0,0,0,0.2);
+    margin-left:59.3%;
+    margin-right:8.5%;
+    margin-top:-1.5%;
+  }
+.dropdown-content a {
+    font-size: 85%;
+    color: black;
+    padding: 1.5% 1.5%;
+    text-decoration: none;
+    display: block;
+}
+.show {display:block;}
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #DAA520;
+    min-width: 30%;
+    overflow: auto;
+    box-shadow: 10% 10% 10% 10% rgba(0,0,0,0.2);
+    margin-left:65%;
+    margin-right:10%;
+    margin-top:-3%;
+}
+.dropdown-content2 a {
+    font-size: 80%;
+    color: black;
+    padding: 1.5% 1.5%;
+    text-decoration: none;
+    display: block;
+}
+.show2 {display:block;}
+
+
