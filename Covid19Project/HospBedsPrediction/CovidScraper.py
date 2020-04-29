@@ -55,13 +55,13 @@ def bedsNeeded(c, d, tracker, days):
     dischargeAmt = {15:(1/4), 21:(1/3), 26:(1/2), 32:1}
     #run simulation for each county
     for i in c.keys():
-        #Of the initial reported numbers, around 75% are in the hospital
+        #Of the initial reported numbers, around 75% will require hospital care
         beds[i].append(int(round(int(tracker[i][0][0]) * .75)))
-        #1/3 of people need hospitalization and of those 1/3%, it can be assumed that 75% will be discharged
-        toDischarge = [round(z * (1/3) * 0.75) for z in copy.deepcopy(c[i])] 
+        #0.3 of people need hospitalization and of those 0.3, it can be assumed that 75% will be discharged
+        toDischarge = [round(z * 0.3 * 0.75) for z in copy.deepcopy(c[i])] 
         #loop through all days from day 1 to today
         for j in range(len(c[i])):
-            yestH, newHosp, deaths = beds[i][j], (1/3) * c[i][j], 0.8 * d[i][j] 
+            yestH, newHosp, deaths = beds[i][j], 0.3 * c[i][j], 0.8 * d[i][j] 
             #calculate people to discharge today
             todayDischarge = 0
             for k in dischargeAmt.keys():
@@ -78,8 +78,36 @@ def bedsNeeded(c, d, tracker, days):
             beds[i] = extra + beds[i]
     return beds
 
+def allClear(cases, days, extra):
+    isIncr, consecDays, consecTrack = defaultdict(bool), defaultdict(list), defaultdict(int)
+    #init isIncr
+    for i in cases.keys():
+        if i.split(",")[1] not in isIncr:
+            isIncr[i.split(",")[1]] = True
+    toCheck, backCheck = (days - extra), 0
+    #check new cases by state
+    while toCheck > 0:
+        for i in cases.keys():
+            state, thisInd = i.split(",")[1], (len(cases[i]) - (extra + 1) - backCheck)
+            if thisInd >= 0 and (len(consecDays[state]) < backCheck + 1):
+                consecDays[state].append(cases[i][backCheck])
+            elif thisInd >= 0:
+                consecDays[state][backCheck] += cases[i][backCheck]
+        toCheck -= 1
+        backCheck += 1
+    #save consecutive days of decreasing new cases
+    for i in consecDays.keys():
+        for j in range(len(consecDays[i])-1,-1,-1):
+            if j == len(consecDays[i]) - 1:
+                consecTrack[i] = 0
+            elif isIncr[i] and (consecDays[i][j] > consecDays[i][j+1]):
+                consecTrack[i] += 1
+            else:
+                isIncr[i] = False
+    return consecTrack
+
 def main():
-    start, end, delta = date(2020,3,22), date(2020,4,25), timedelta(days=1)
+    start, end, delta = date(2020,3,22), date(2020,4,28), timedelta(days=1)
     tracker = defaultdict(list)
     days, days2 = 3, 3
     dates = []
@@ -107,17 +135,13 @@ def main():
         forwJson.append(toAppend)
     with open('BedsNeeded.json', mode='w+') as output:
         json.dump(forwJson,output)
-
+    #converting consecutive days of decreasing cases to csv
+    with open('DecrCases.csv', mode='w+') as output:
+        clears = allClear(c, days, days2)
+        writer = csv.writer(output, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(["State","Consecutive Days of Decreasing New Cases"])
+        for i in clears.keys():
+            writer.writerow([i, clears[i]])
+    
 if __name__ == '__main__':
 	main()
-
-
-
-
-
-
-
-
-
-
-
