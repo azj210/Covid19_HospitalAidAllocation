@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 .containerHead{
-    background: linear-gradient(to right,#40E0D0,#4682B4);
+    background: linear-gradient(to right,#B22222,#4682B4);
     width: 100%;
     height: 15%;    
 }
@@ -34,7 +34,7 @@
     margin-right: 5%;
     margin-left: 3%;
 }
-.menu li{
+.menu li {
     list-style: none;
     max-width: 50%;     
     height: auto;
@@ -43,7 +43,6 @@
     margin-right: -43%;
     margin-left: 2%;
     font-size: 155%;
-    color: #00000;
     cursor: pointer;
 }
 .logo img{
@@ -126,11 +125,6 @@
     cursor: pointer;
     display: inline-block;
 }
-.key img{
-    width: 90%;
-    margin-left: -150%;
-    margin-top: -4%;
-}
 
 .dropdown-content{
     display: none;
@@ -144,6 +138,7 @@
     margin-left:59.3%;
     margin-right:8.5%;
     margin-top:-1.5%;
+    z-index: 1;
   }
 .dropdown-content a{
     font-size: 85%;
@@ -165,6 +160,7 @@
     margin-left:65%;
     margin-right:10%;
     margin-top:-3%;
+    z-index: 1;
 }
 .dropdown-content2 a{
     font-size: 80%;
@@ -174,5 +170,7 @@
     display: block;
 }
 .show2 {display:block;}
-
+.blank{
+    margin-top:5%;
+}
 
