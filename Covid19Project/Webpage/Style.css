@@ -6,7 +6,31 @@
 .containerHead{
     background: linear-gradient(to right,#B22222,#4682B4);
     width: 100%;
-    height: 15%;    
+    height: 15%;
+    max-height: 100%;
+    min-height:10%;  
+}
+.meDescrip{
+    margin-left: 4%;
+    margin-top: 1.5%;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 5%;
+    min-width: 5%;
+    font-size: 75%;
+    color: #FFFFFF;
+    position: absolute;
+}
+.meDescrip2{
+    margin-left: 4%;
+    margin-top: 3.5%;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 3%;
+    min-width: 5%;
+    font-size: 75%;
+    color: #FFFFFF;
+    position: absolute;
 }
 .covidImg img{
     list-style: none;
@@ -59,7 +83,7 @@
     font-size: 90%;
     cursor: pointer;
     display: inline-block;
-    margin-bottom: 1.75%;  
+    margin-bottom: 1.75%; 
   }
   /* hover over */
   .btn:hover {background: #eee;}
@@ -173,4 +197,8 @@
 .blank{
     margin-top:5%;
 }
-
+/*
+.tableauPlaceholdertop{
+    z-index: -1;
+}
+*/
