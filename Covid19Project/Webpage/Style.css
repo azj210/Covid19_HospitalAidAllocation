@@ -16,7 +16,7 @@
     height: 25%;
     max-height: 100%;
     min-height: 10%;
-    margin-top: 215%;
+    margin-top: 220%;
     position: absolute;
 }
 .update{
@@ -86,16 +86,16 @@
 .container2{
     width: 100%;
     height: 100%;
-    margin-top: 35%;
+    margin-top: 36.5%;
     background: #FFFFFF;
-    position:absolute
+    position: absolute;
 }
 .container3{
     width: 100%;
     height: 100%;
-    margin-top: 126%;
+    margin-top: 129%;
     background: #FFFFFF;
-    position:absolute
+    position: absolute;
 }
 .menu ul{
     display: inline-flex;
