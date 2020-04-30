@@ -29,7 +29,7 @@ def predict(x, y, pred):
             futureCases.append(case)
     return futureCases
 
-def generatePredict(tracker, condition, days):
+def generatePredict(tracker, condition, days):  
     res = defaultdict(int)
     for i in tracker.keys():
         #error handling for if there is 2 days or less worth of data
@@ -78,7 +78,7 @@ def bedsNeeded(c, d, tracker, days):
             beds[i] = extra + beds[i]
     return beds
 
-def allClear(cases, days, extra):
+def allClear(cases, days, extra, mode):
     isIncr, consecDays, consecTrack = defaultdict(bool), defaultdict(list), defaultdict(int)
     #init isIncr
     for i in cases.keys():
@@ -104,10 +104,12 @@ def allClear(cases, days, extra):
                 consecTrack[i] += 1
             else:
                 isIncr[i] = False
+    if mode == 0:
+        return consecDays
     return consecTrack
 
 def main():
-    start, end, delta = date(2020,3,22), date(2020,4,28), timedelta(days=1)
+    start, end, delta = date(2020,3,22), date(2020,4,29), timedelta(days=1)
     tracker = defaultdict(list)
     days, days2 = 3, 3
     dates = []
@@ -135,13 +137,28 @@ def main():
         forwJson.append(toAppend)
     with open('BedsNeeded.json', mode='w+') as output:
         json.dump(forwJson,output)
+    with open('NewCasesTrack.csv', mode='w+') as output:
+        writer = csv.writer(output, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        head = ["state"]
+        for i in range(10):
+            head.append(end.strftime('%m-%d-%Y'))
+            end -= delta
+        writer.writerow(head)
+        info = allClear(c, days, days2, 0)
+        for i in info.keys():
+            a = info[i][len(info[i])-10:len(info[i])]
+            a.reverse()
+            writer.writerow([i] + a)
     #converting consecutive days of decreasing cases to csv
     with open('DecrCases.csv', mode='w+') as output:
-        clears = allClear(c, days, days2)
+        clears = allClear(c, days, days2, 1)
         writer = csv.writer(output, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(["State","Consecutive Days of Decreasing New Cases"])
         for i in clears.keys():
             writer.writerow([i, clears[i]])
-    
 if __name__ == '__main__':
 	main()
+
+
+
+
