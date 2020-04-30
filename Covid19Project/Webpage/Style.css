@@ -17,6 +17,7 @@
     max-height: 100%;
     min-height: 10%;
     margin-top: 15%;  
+    position:relative;
 }
 .update{
     margin-left:75%;
@@ -243,12 +244,17 @@
 .show2 {display:block;}
 .blank{
     margin-top: 40.5%;
+    position: relative;
 }
 .blank2{
     margin-top: 41.5%;
+    position: relative;
 }
 .blank3{
     margin-top: 35%;
+    position: relative;
 }
-
+.tableauPlaceholder{
+    position: relative;
+}
 
