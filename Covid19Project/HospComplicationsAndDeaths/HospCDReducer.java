@@ -24,7 +24,7 @@ public class HospCDReducer
     }
 
     //larger negative deviation means more worse than national avg
-    Double totalDeviation = (10.0684932586596 - ((totalDeaths / totalCases)));
+    Double totalDeviation = (10.0684932586596 - ((totalDeaths / totalCases)) + 1);
     String formatDeviation = String.format("%.4f", totalDeviation);
 
     if (totalCases != 0) {
