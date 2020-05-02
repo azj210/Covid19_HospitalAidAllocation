@@ -1,25 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Hospital & Population Analytics</title>
-    <link rel="stylesheet" href = "Style.css">   
+    <link rel="stylesheet" href = "bStyle.css">   
     <script src="https://kit.fontawesome.com/4676a18556.js" crossorigin="anonymous"></script>
     <script src="Button.js">  </script>
 </head>
 <body>
-    <!--Header-->
-    <div class = "containerHead">
-        <lii class = "covidImg"><img src = "covid19.jpg"></lii>
-        <b class = "meDescrip">Created by Alex Jiang. Email: alex.mjiang@gmail.com</b>
-        <a href = "https://github.com/azj210" class = "gitHub"><i class="fab fa-github-square"></i></a>
-        <a href = "https://www.linkedin.com/in/alex-jiang-a3693a125/" class = "linkedIn"><i class="fab fa-linkedin"></i></a>
-        <d class = "update">Last updated on April 29, 2020</d>
-    </div>
 
-    <!--Hospital View-->
     <div class = "container">
-        <div class = "menu">
+        <div class = "start">
+            <b class = "meDescrip">Created by Alex Jiang. Email: alex.mjiang@gmail.com</b>
+            <a href = "https://github.com/azj210" class = "gitHub"><i class="fab fa-github-square"></i></a>
+            <a href = "https://www.linkedin.com/in/alex-jiang-a3693a125/" class = "linkedIn"><i class="fab fa-linkedin"></i></a>
+            <d class = "update">Last updated on May 1, 2020</d>
+        </div>
+        <!--Hospital View-->
+        <div class = "blank"></div>
+
+        <div class = "menu2">
             <ul>            
                 <li class="logo"><img src = "hospital.png"></li>
                 <li>US Hospital Capacity by County</li> 
@@ -48,47 +49,39 @@
             </div>
         </div>
 
-        <div class='tableauPlaceholder' id='viz1588277351634' style='position: relative'>
+        <div class='tableauPlaceholder' id='viz1588402909836' style='position: relative'>
             <noscript>
                 <a href='#'>
-                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P1U&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M5&#47;M5YKHQMRF&#47;1_rss.png' style='border: none' />
                 </a>
             </noscript>
             <object class='tableauViz'  style='display:none;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
                 <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='429P1U&#47;Dashboard1' />
-                <param name='tabs' value='no' />
+                <param name='path' value='shared&#47;M5YKHQMRF' /> 
                 <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P1U&#47;Dashboard1&#47;1.png' /> 
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M5&#47;M5YKHQMRF&#47;1.png' /> 
                 <param name='animate_transition' value='yes' />
                 <param name='display_static_image' value='yes' />
                 <param name='display_spinner' value='yes' />
                 <param name='display_overlay' value='yes' />
                 <param name='display_count' value='yes' />
                 <param name='filter' value='publish=yes' />
-            </object>
-        </div>                
-        <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1588277351634');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        if ( divElement.offsetWidth > 800 ) { 
-            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-        else if ( divElement.offsetWidth > 500 ) { 
-            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-        else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-        </script>    
-    
-    </div>
-
-    <div class ="line2"></div>
-
-    <!-- Aggregate Data View-->    
-    <div class = "container2">  
+            </object></div>                
+            <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1588402909836');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        
+        <!--Aggregate Data View-->
         <div class ="line2"></div> 
         <div class = "menu">
             <ul>            
@@ -111,43 +104,41 @@
             </div>
         </div>
         
-        <div class='tableauPlaceholder' id='viz1588278611788' style='position: relative'>
+        <div class='tableauPlaceholder' id='viz1588402801180' style='position: relative'>
             <noscript>
                 <a href='#'>
-                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P2U&#47;Dashboard1&#47;1_rss.png' style='border: none' />
-                </a>    
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;50&#47;501P2&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                </a>
             </noscript>
             <object class='tableauViz'  style='display:none;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-                <param name='name' value='429P2U&#47;Dashboard1' /><param name='tabs' value='no' />
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='501P2&#47;Dashboard1' />
+                <param name='tabs' value='no' />
                 <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P2U&#47;Dashboard1&#47;1.png' /> 
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;50&#47;501P2&#47;Dashboard1&#47;1.png' /> 
                 <param name='animate_transition' value='yes' />
                 <param name='display_static_image' value='yes' />
                 <param name='display_spinner' value='yes' />
                 <param name='display_overlay' value='yes' />
                 <param name='display_count' value='yes' />
                 <param name='filter' value='publish=yes' />
-            </object>
-        </div>                  
-        <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1588278611788');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        if ( divElement.offsetWidth > 800 ) { 
-            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-        else if ( divElement.offsetWidth > 500 ) { 
-            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-        else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-        </script>    
-    
-    </div>
+            </object></div>                
+            <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1588402801180');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>    
 
-    <!--Other Data-->
-    <div class="container3">
+        <!-- Other Data-->
         <div class ="line2"></div>
         <div class = "menu">
             <ul>            
@@ -157,34 +148,42 @@
             <div class = "line"></div>
         </div>    
         
-        <div class='tableauPlaceholder' id='viz1588279562614' style='position: relative'>
+        <div class='tableauPlaceholder' id='viz1588403107354' style='position: relative'>
             <noscript>
                 <a href='#'>
-                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P3U&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;50&#47;501P3&#47;Dashboard1&#47;1_rss.png' style='border: none' />
                 </a>
             </noscript>
-            <object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                 <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-                 <param name='name' value='429P3U&#47;Dashboard1' /><param name='tabs' value='no' />
-                 <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;429P3U&#47;Dashboard1&#47;1.png' />
-                  <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
-                  <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
-                  <param name='display_count' value='yes' /><param name='filter' value='publish=yes' />
-                </object>
-            </div>                
+            <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                <param name='name' value='501P3&#47;Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;50&#47;501P3&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='filter' value='publish=yes' />
+            </object></div>                
             <script type='text/javascript'>                    
-            var divElement = document.getElementById('viz1588279562614');                    
+            var divElement = document.getElementById('viz1588403107354');                    
             var vizElement = divElement.getElementsByTagName('object')[0];                    
-            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-            </script>    
+            if ( divElement.offsetWidth > 800 ) { 
+                vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else if ( divElement.offsetWidth > 500 ) { 
+                vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
     
     </div>
-
     <!--Footer-->
-    <div class = "containerFoot">
+    <div class = "end">
         <f class = "lastPart">Thank you to Cloudera for providing the Apache Hadoop Cluster Software, Tableau for providing their JavaScript API, and NYU High Performance Computing for providing the Dumbo Cluster. <br>I would also like to thank my data sources: American Hospital Directory, JHU CSSE, Data.Medicare.gov, and Census.gov. <br><br>Lastly, I would like to thank YOU for taking the time to view my webpage! <br>If you like my work be sure to check out my past projects and follow my future ones at github.com/azj210.</f>
     </div>
 
+    
 </body>
 </html>
