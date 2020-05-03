@@ -57,6 +57,7 @@ Results from MapReduce were stored in HDFS. These files were then joined with Hi
 
 
 **Hospital Bed Prediction Portion**
+
 Explanation of CovidScraper.py to calculate/predict Hospital Beds Needed Timeseries:
 
 After calculating new cases/deaths every day for each county starting from 3/22, I took the calculated data and fit the data set using a least squares polynomial fit function with days as the independent variable and cases or deaths as the dependent variable. Taking the coefficients that minimize squared error, I used the resultant equation to predict new cases/deaths 3 days out based on days since 3/22.
@@ -71,10 +72,15 @@ As for discharges, I kept a separate dictionary of patients who enter the hospit
 All code from above is available in HospBedsPrediction
 
 Sources I used to arrive at my assumptions are:
+
 https://www.statnews.com/2020/03/10/simple-math-alarming-answers-covid-19/
+
 https://www.youtube.com/watch?v=DgQbRHaX3K4
+
 https://www.nytimes.com/2020/04/14/nyregion/new-york-coronavirus-deaths.html
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7118526/
+
 https://www.worldometers.info/coronavirus/coronavirus-death-rate/#hfr
 
 **Webpage**
