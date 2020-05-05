@@ -109,7 +109,7 @@ def allClear(cases, days, extra, mode):
     return consecTrack
 
 def main():
-    start, end, delta = date(2020,3,22), date(2020,4,29), timedelta(days=1)
+    start, end, delta = date(2020,3,22), date(2020,5,4), timedelta(days=1)
     tracker = defaultdict(list)
     days, days2 = 3, 3
     dates = []
@@ -140,13 +140,13 @@ def main():
     with open('NewCasesTrack.csv', mode='w+') as output:
         writer = csv.writer(output, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
         head = ["state"]
-        for i in range(10):
+        for i in range(7):
             head.append(end.strftime('%m-%d-%Y'))
             end -= delta
         writer.writerow(head)
         info = allClear(c, days, days2, 0)
         for i in info.keys():
-            a = info[i][len(info[i])-10:len(info[i])]
+            a = info[i][len(info[i])-7:len(info[i])]
             a.reverse()
             writer.writerow([i] + a)
     #converting consecutive days of decreasing cases to csv
@@ -156,6 +156,7 @@ def main():
         writer.writerow(["State","Consecutive Days of Decreasing New Cases"])
         for i in clears.keys():
             writer.writerow([i, clears[i]])
+            
 if __name__ == '__main__':
 	main()
 
