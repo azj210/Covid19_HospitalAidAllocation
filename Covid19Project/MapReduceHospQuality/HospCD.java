@@ -21,7 +21,7 @@ public class HospCD {
     job.setJarByClass(HospCD.class);
     job.setJobName("HospCD");
 
-    job.setNumReduceTasks(1); 
+    job.setNumReduceTasks(30); 
 
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));

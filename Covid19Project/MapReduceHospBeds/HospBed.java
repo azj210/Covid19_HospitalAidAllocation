@@ -21,7 +21,7 @@ public class HospBed {
     job.setJarByClass(HospBed.class);
     job.setJobName("HospBed");
 
-    job.setNumReduceTasks(1); 
+    job.setNumReduceTasks(30); 
 
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
