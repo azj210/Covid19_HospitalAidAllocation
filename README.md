@@ -1,4 +1,7 @@
 # Covid19_HospitalAidAllocation
+link to webpage: http://covidstatusnow.com/
+
+
 **Goal of Project:**
 Examine hospital quality and bed data sets in comparison to Covid19 and US demographics data to reach conclusion on hospital aid allocation by county and general Covid19 data.
 
