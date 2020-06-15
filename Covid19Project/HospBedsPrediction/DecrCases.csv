@@ -1,52 +1,44 @@
 State,Consecutive Days of Decreasing New Cases
-new york,2
-washington,0
-new jersey,1
+new york,1
+washington,1
+new jersey,4
 california,1
-illinois,1
-michigan,1
-florida,1
-louisiana,0
-massachusetts,0
+illinois,3
+michigan,2
+florida,2
+louisiana,1
+massachusetts,2
 texas,2
-georgia,0
-colorado,4
-pennsylvania,0
-tennessee,3
-wisconsin,3
-ohio,1
-connecticut,0
-north carolina,0
-maryland,3
-virginia,1
-mississippi,0
-indiana,3
-south carolina,2
-nevada,0
+georgia,3
+colorado,1
+pennsylvania,2
+wisconsin,2
+ohio,2
+connecticut,1
+north carolina,1
+maryland,1
+mississippi,2
+indiana,1
+nevada,1
 utah,1
-minnesota,0
-arkansas,1
-oregon,0
-alabama,2
-arizona,0
+minnesota,2
+arkansas,2
+oregon,2
+arizona,1
 kentucky,1
-missouri,1
-iowa,0
+missouri,2
+iowa,2
 maine,1
-rhode island,5
 new hampshire,3
 oklahoma,1
-kansas,1
-new mexico,0
-hawaii,0
+new mexico,2
+hawaii,1
 delaware,1
-vermont,1
-nebraska,1
-idaho,0
-montana,0
-north dakota,2
-wyoming,0
-south dakota,4
+vermont,3
+nebraska,2
+montana,1
+north dakota,1
+wyoming,3
+south dakota,1
 alaska,1
-west virginia,0
-district of columbia,1
+west virginia,2
