@@ -94,15 +94,10 @@ def bedsNeeded(c, d, tracker, days):
 
 
 def allClear(cases, days, extra, mode):
-    isIncr, consecDays, consecTrack = defaultdict(bool), defaultdict(list), defaultdict(lambda: 0)
-    
-    #init isIncr
-    for i in cases.keys():
-        if i.split(",")[1] not in isIncr:
-            isIncr[i.split(",")[1]] = True
-    toCheck, backCheck = (days - extra), 0
-    
+    consecDays, consecTrack = defaultdict(list), defaultdict(lambda: 0)
+        
     #check new cases by state
+    toCheck, backCheck = (days - extra), 0
     while toCheck > 0:
         for i in cases.keys():
             state, thisInd = i.split(",")[1], (len(cases[i]) - (extra + 1) - backCheck)
@@ -118,13 +113,15 @@ def allClear(cases, days, extra, mode):
     
     #save consecutive days of decreasing new cases
     for i in consecDays.keys():
-        for j in range(len(consecDays[i])-1, 2, -1):
+        for j in range(len(consecDays[i])-1, 4, -1):
             #if on a particular day the number of new cases is less than the avg of the number of new cases
-            #over the prior 3 days, then we add 1 to consecutive days of decreasing cases
-            if isIncr[i] and (consecDays[i][j] < mean(consecDays[i][j-3:j])):
+            #over the last 5 days, then we add 1 to consecutive days of decreasing cases
+            if consecDays[i][j] <= mean(consecDays[i][j-5:j]):
                 consecTrack[i] += 1
             else:
-                isIncr[i] = False
+                #set the amount of non consec decreasing cases to 0 
+                if not consecTrack[i]:
+                    consecTrack[i] = 0
                 break
                 
     return consecTrack
