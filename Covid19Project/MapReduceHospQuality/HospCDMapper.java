@@ -3,56 +3,58 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+
 import java.util.*;
 
 public class HospCDMapper
     extends Mapper<LongWritable, Text, Text, Text> {
   
-  @Override
-  public void map(LongWritable key, Text value, Context context)
+    @Override
+    public void map(LongWritable key, Text value, Context context)
       throws IOException, InterruptedException {
-    
-    String[] line = value.toString().toLowerCase().split(",");
-    //only count respiratory ailments
-    String[] causes = {"death rate for copd patients", "death rate for pneumonia patients", "postoperative respiratory failure rate"};
 
-    int endLine = (line.length - 1);   
-    //check if current line contains a respiratory illness
-    for (int i=0; i < causes.length; i++){
-      if (causes[i].equals(line[9])){
-        //indexes: death rate -5, denom -6, condition -8, county -11, state -13, city -14
-        //get the state name from the abbreviated form
-        String fullState = "not available";
-        try{
-          fullState = (String)STATE_MAP.get(line[endLine-13].toUpperCase()).toLowerCase();
-        }
-        catch (Exception e){
+        String[] line = value.toString().toLowerCase().split(",");
+        //only count respiratory ailments
+        String[] causes = {"death rate for copd patients", "death rate for pneumonia patients", "postoperative respiratory failure rate"};
 
-        }
-        //setting the key value pair
-        //new york city boroughs case
-        if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings") || line[endLine-11].equals("bronx")) && fullState.equals("new york")){
-            String locationRecord = line[endLine-14] + "!" + "new york" + "!" + fullState;
-            String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
-            //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
-            context.write(new Text(locationRecord), new Text(complicationRecord));
-            break;
-        }
-        //all other counties
-        else{
-            String locationRecord = line[endLine-14] + "!" + line[endLine-11] + "!" + fullState;
-            String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
-            //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
-            context.write(new Text(locationRecord), new Text(complicationRecord));
-            break;
-        }
-      }
-    }  
-  } 
-  
-  //Map of state_abbreviations to full state name
-  public static final Map<String, String> STATE_MAP;
-  static {
+        int endLine = (line.length - 1);   
+        //check if current line contains a respiratory illness
+        for (int i=0; i < causes.length; i++){
+            if (causes[i].equals(line[9])){
+                //indexes: death rate -5, denom -6, condition -8, county -11, state -13, city -14
+                //get the state name from the abbreviated form
+                String fullState = "not available";
+                try{
+                    fullState = (String)STATE_MAP.get(line[endLine-13].toUpperCase()).toLowerCase();
+                }
+                catch (Exception e){
+
+                }
+
+                //setting the key value pair
+                //new york city boroughs case
+                if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings") || line[endLine-11].equals("bronx")) && fullState.equals("new york")){
+                    String locationRecord = line[endLine-14] + "!" + "new york" + "!" + fullState;
+                    String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
+                    //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
+                    context.write(new Text(locationRecord), new Text(complicationRecord));
+                    break;
+                }
+                //all other counties
+                else{
+                    String locationRecord = line[endLine-14] + "!" + line[endLine-11] + "!" + fullState;
+                    String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
+                    //key is city!county!state and value is patients!deaths of a particular complication for a hospital in a city!county!state
+                    context.write(new Text(locationRecord), new Text(complicationRecord));
+                    break;
+                }
+            }
+        }  
+    } 
+
+    //Map of state_abbreviations to full state name
+    public static final Map<String, String> STATE_MAP;
+    static {
     STATE_MAP = new HashMap<String, String>();
     STATE_MAP.put("AL", "Alabama");
     STATE_MAP.put("AK", "Alaska");
@@ -109,7 +111,7 @@ public class HospCDMapper
     STATE_MAP.put("WV", "West Virginia");
     STATE_MAP.put("WI", "Wisconsin");
     STATE_MAP.put("WY", "Wyoming");
-  }
+    }
 }
 
 

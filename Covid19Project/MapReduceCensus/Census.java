@@ -8,30 +8,30 @@ import org.apache.hadoop.conf.Configuration;
 
 public class Census {
 
-  public static void main(String[] args) throws Exception {
-    if (args.length != 2) {
-      System.err.println("Usage: Census <input path> <output path>");
-      System.exit(-1);
+    public static void main(String[] args) throws Exception {
+        if (args.length != 2) {
+            System.err.println("Usage: Census <input path> <output path>");
+            System.exit(-1);
+        }
+
+        final Configuration conf = new Configuration();
+        conf.set("mapred.textoutputformat.separator", "!");
+        Job job = Job.getInstance(conf);
+
+        job.setJarByClass(Census.class);
+        job.setJobName("Census");
+
+        job.setNumReduceTasks(30); 
+
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+        job.setMapperClass(CensusMapper.class);
+        job.setReducerClass(CensusReducer.class);
+
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
-
-    final Configuration conf = new Configuration();
-    conf.set("mapred.textoutputformat.separator", "!");
-    Job job = Job.getInstance(conf);
-
-    job.setJarByClass(Census.class);
-    job.setJobName("Census");
-
-    job.setNumReduceTasks(30); 
-
-    FileInputFormat.addInputPath(job, new Path(args[0]));
-    FileOutputFormat.setOutputPath(job, new Path(args[1]));
-
-    job.setMapperClass(CensusMapper.class);
-    job.setReducerClass(CensusReducer.class);
-
-    job.setOutputKeyClass(Text.class);
-    job.setOutputValueClass(Text.class);
-    
-    System.exit(job.waitForCompletion(true) ? 0 : 1);
-  }
 }
