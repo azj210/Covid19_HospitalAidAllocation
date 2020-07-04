@@ -13,7 +13,9 @@ public class HospCDMapper
       throws IOException, InterruptedException {
     
     String[] line = value.toString().toLowerCase().split(",");
+    //only count respiratory ailments
     String[] causes = {"death rate for copd patients", "death rate for pneumonia patients", "postoperative respiratory failure rate"};
+
     int endLine = (line.length - 1);   
     //check if current line contains a respiratory illness
     for (int i=0; i < causes.length; i++){
@@ -28,6 +30,7 @@ public class HospCDMapper
 
         }
         //setting the key value pair
+        //new york city boroughs case
         if ((line[endLine-11].equals("queens") || line[endLine-11].equals("kings") || line[endLine-11].equals("bronx")) && fullState.equals("new york")){
             String locationRecord = line[endLine-14] + "!" + "new york" + "!" + fullState;
             String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
@@ -35,6 +38,7 @@ public class HospCDMapper
             context.write(new Text(locationRecord), new Text(complicationRecord));
             break;
         }
+        //all other counties
         else{
             String locationRecord = line[endLine-14] + "!" + line[endLine-11] + "!" + fullState;
             String complicationRecord = line[endLine-6] + "!" + line[endLine-5];
@@ -45,7 +49,8 @@ public class HospCDMapper
       }
     }  
   } 
-  //Dictionary of state_abbreviation, full state name
+  
+  //Map of state_abbreviations to full state name
   public static final Map<String, String> STATE_MAP;
   static {
     STATE_MAP = new HashMap<String, String>();

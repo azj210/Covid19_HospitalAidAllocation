@@ -14,12 +14,14 @@ public class CensusMapper
       throws IOException, InterruptedException {
     
     String[] line = value.toString().toLowerCase().split(",");
+    //only count ages >= 55
     String[] AGEGRP = {"12", "13", "14", "15", "16", "17", "18"};
 
     for (int i=0; i < AGEGRP.length; i++){
       if (line[5].equals("11") && line[6].equals(AGEGRP[i])){
         //indexes: STNAME -3, CTYNAME -4, YEAR -5, AGEGRP -6, TOT_POP -7, TOT_MALE -8
         //setting the key value pair
+        //nyc boroughs cases
         if ((line[4].equals("kings county") || line[4].equals("queens county") || line[4].equals("bronx county")) && line[3].equals("new york")){
           line[4] = "new york county";
         }
